@@ -1,7 +1,8 @@
 import React from "react";
-import Header from "../DOM/Header";
-import Footer from "../DOM/Footer";
-import Body from "../DOM/Body";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "../DOM/Header/Header.js";
+import Footer from "../DOM/Footer/Footer.js";
+import Body from "../DOM/Body/Body.js";
 export const Base = () => {
   return (
     <div>

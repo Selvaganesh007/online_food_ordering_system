@@ -1,0 +1,10 @@
+.nav {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  background-color: skyblue;
+}
+
+div h1 {
+  margin: 20px;
+}
