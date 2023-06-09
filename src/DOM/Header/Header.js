@@ -6,7 +6,7 @@ import "./Header.css";
 const Header = () => {
   return (
     <div className="nav">
-      <h1>CCC</h1>
+      <h1>Tamil Feast</h1>
       <Radio className="radio" />
       <Dropdown className="drpdwn" />
       <Button className="addbtn" />

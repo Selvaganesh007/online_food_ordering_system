@@ -36,11 +36,11 @@ const Body = () => {
   }, []);
 
   return (
-    <div>
+    <>
       {foodDetails.map((items) => {
         return <Cards items={items} />;
       })}
-    </div>
+    </>
   );
 };
 

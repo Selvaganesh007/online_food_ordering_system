@@ -1,23 +1,69 @@
-.cards {
-  margin: 30px 30px;
-  width: 20%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  display: inline-block;
+/* Cards.css */
+
+.card-row {
+  padding-right: 25px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.container {
+.card {
   text-align: center;
+  border: 0.5px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0.2, 0);
+  transition: 0.3s;
+  width: 300px;
+  margin: 12px;
+  background-color: rgb(121, 226, 216);
 }
 
-.addcart {
-  display: flex;
-  height: 20px;
-  align-items: center;
-  padding-bottom: 10px;
-  margin-left: 40px;
+.card:hover {
+  box-shadow: 4px 4px 8px 4px rgba(13, 202, 193, 0.722);
 }
 
-.addcart button {
-  margin-right: 10px;
-  margin-left: 10px;
+.card h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card h4 {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.card-buttons {
+  margin-top: 10px;
+}
+
+.card-buttons .button-2 {
+  padding: 5px 10px;
+  border-radius: 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.card-buttons .button-2:hover {
+  background-color: #0056b3;
+}
+
+.card-buttons p {
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 10px;
+}
+
+.addcartbtn {
+  padding: 5px 10px;
+  border-radius: 7px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-right: 20px;
 }
