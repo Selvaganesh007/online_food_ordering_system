@@ -3,6 +3,7 @@ import "./Cards.css";
 import { useDispatch } from "react-redux";
 import { addCart } from "../../features/Addcartprop";
 import { useNavigate } from "react-router-dom";
+import { Button } from "../Button/Button.js";
 
 export const Cards = ({ items }) => {
   const [count, setCount] = useState(0);
@@ -16,9 +17,10 @@ export const Cards = ({ items }) => {
     setCount(count - 1);
   };
 
-  const HandleCart = (items) => {
-    navigate("/add-cart");
-    console.log(dispatch(addCart(items)));
+  const handleAddCart = () => {
+    console.log(items);
+    const cartDetails = [{ ...items, Quantity: count }];
+    console.log(dispatch(addCart(cartDetails)));
   };
 
   return (
@@ -37,9 +39,10 @@ export const Cards = ({ items }) => {
           <button onClick={buttonAdd} className="button-2">
             +
           </button>
-          <button onClick={() => HandleCart(items)} className="addcartbtn">
+          <Button buttonName="Add To Cart" onClick={handleAddCart} />
+          {/* <button onClick={() => HandleCart(items)} className="addcartbtn">
             Add To Cart
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Cards } from "../../components/Cards/Cards";
 import { useSelector } from "react-redux";
 import { get_food_details } from "../../MockData/mockData";
+import Header from "../Header/Header";
+import Footer from "./Sections/Footer/Footer";
 const Body = () => {
   const [foodDetails, SetfoodDetails] = useState([]);
   const dropDownoption = useSelector((state) => state.dropDown.value);
@@ -36,11 +38,15 @@ const Body = () => {
   }, []);
 
   return (
-    <>
-      {foodDetails.map((items) => {
-        return <Cards items={items} />;
-      })}
-    </>
+    <div>
+      <Header />
+      <div>
+        {foodDetails.map((items) => {
+          return <Cards items={items} />;
+        })}
+      </div>
+      <Footer />
+    </div>
   );
 };
 
