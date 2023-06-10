@@ -1,0 +1,21 @@
+.carttable {
+  width: 400px;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.carttable td,
+.carttable th {
+  text-align: center;
+  border: 2px solid #ddd;
+  padding: 8px;
+}
+
+.carttable th {
+  text-align: center;
+  background-color: #2fc648;
+  color: white;
+}
+tr:hover {
+  background-color: rgb(195, 190, 188);
+}

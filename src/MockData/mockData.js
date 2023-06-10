@@ -11,6 +11,7 @@ export const get_food_details = [
     star: 2,
     description: "Spicy chicken sandwich with fries",
     timing: "break-fast",
+    price: 150,
   },
   {
     food_id: 2,
@@ -20,6 +21,7 @@ export const get_food_details = [
     star: 2,
     description: "Vegetarian pizza with extra cheese",
     timing: "Lunch",
+    price: 150,
   },
   {
     food_id: 3,
@@ -29,6 +31,7 @@ export const get_food_details = [
     star: 3,
     description: "Grilled salmon with asparagus",
     timing: "Dinner",
+    price: 150,
   },
   {
     food_id: 4,
@@ -38,6 +41,7 @@ export const get_food_details = [
     star: 4,
     description: "Beef stir fry with rice",
     timing: "break-fast",
+    price: 150,
   },
   {
     food_id: 5,
@@ -47,6 +51,7 @@ export const get_food_details = [
     star: 1,
     description: "Caesar salad with grilled chicken",
     timing: "Lunch",
+    price: 150,
   },
   {
     food_id: 6,
@@ -56,6 +61,7 @@ export const get_food_details = [
     star: 1,
     description: "Pesto pasta with garlic bread",
     timing: "Dinner",
+    price: 150,
   },
   {
     food_id: 7,
@@ -65,6 +71,7 @@ export const get_food_details = [
     star: 4,
     description: "Taco salad with avocado dressing",
     timing: "break-fast",
+    price: 150,
   },
   {
     food_id: 8,
@@ -74,6 +81,7 @@ export const get_food_details = [
     star: 0,
     description: "Mushroom risotto with truffle oil",
     timing: "Lunch",
+    price: 150,
   },
   {
     food_id: 9,
@@ -83,6 +91,7 @@ export const get_food_details = [
     star: 5,
     description: "Fish and chips with tartar sauce",
     timing: "Dinner",
+    price: 150,
   },
   {
     food_id: 10,
@@ -92,6 +101,7 @@ export const get_food_details = [
     star: 3,
     description: "Chicken alfredo with broccoli",
     timing: "break-fast",
+    price: 150,
   },
   {
     food_id: 11,
@@ -101,6 +111,7 @@ export const get_food_details = [
     star: 3,
     description: "Veggie burger with sweet potato fries",
     timing: "Lunch",
+    price: 150,
   },
   {
     food_id: 12,
@@ -110,6 +121,7 @@ export const get_food_details = [
     star: 1,
     description: "Shrimp scampi with linguine",
     timing: "Dinner",
+    price: 150,
   },
   {
     food_id: 13,
@@ -119,6 +131,7 @@ export const get_food_details = [
     star: 1,
     description: "Beef fajitas with guacamole",
     timing: "break-fast",
+    price: 150,
   },
   {
     food_id: 14,
@@ -128,6 +141,7 @@ export const get_food_details = [
     star: 0,
     description: "Tomato soup with grilled cheese sandwich",
     timing: "Lunch",
+    price: 150,
   },
   {
     food_id: 15,
@@ -137,6 +151,7 @@ export const get_food_details = [
     star: 2,
     description: "Pad Thai with shrimp",
     timing: "Dinner",
+    price: 150,
   },
   {
     food_id: 16,
@@ -146,6 +161,7 @@ export const get_food_details = [
     star: 0,
     description: "Lamb chops with roasted potatoes",
     timing: "break-fast",
+    price: 150,
   },
   {
     food_id: 17,
@@ -155,6 +171,7 @@ export const get_food_details = [
     star: 3,
     description: "Spinach and feta omelette with toast",
     timing: "Lunch",
+    price: 150,
   },
   {
     food_id: 18,
@@ -164,6 +181,7 @@ export const get_food_details = [
     star: 5,
     description: "Beef and broccoli with white rice",
     timing: "Dinner",
+    price: 150,
   },
   {
     food_id: 19,
@@ -173,6 +191,7 @@ export const get_food_details = [
     star: 5,
     description: "Chicken tikka masala with naan bread",
     timing: "break-fast",
+    price: 150,
   },
   {
     food_id: 20,
@@ -182,6 +201,7 @@ export const get_food_details = [
     star: 1,
     description: "Pulled pork sandwich with coleslaw",
     timing: "Lunch",
+    price: 150,
   },
   {
     food_id: 21,
@@ -191,6 +211,7 @@ export const get_food_details = [
     star: 2,
     description: "Grilled portobello mushroom burger with fries",
     timing: "Dinner",
+    price: 150,
   },
   {
     food_id: 22,
@@ -200,6 +221,7 @@ export const get_food_details = [
     star: 5,
     description: "Beef bourguignon with mashed potatoes",
     timing: "break-fast",
+    price: 150,
   },
   {
     food_id: 23,
@@ -209,6 +231,7 @@ export const get_food_details = [
     star: 4,
     description: "Chicken shawarma with hummus",
     timing: "Lunch",
+    price: 150,
   },
   {
     food_id: 24,
@@ -218,6 +241,7 @@ export const get_food_details = [
     star: 0,
     description: "Baked ziti with garlic bread",
     timing: "Dinner",
+    price: 150,
   },
   {
     food_id: 25,
@@ -227,6 +251,7 @@ export const get_food_details = [
     star: 3,
     description: "Vegetable stir fry with noodles",
     timing: "break-fast",
+    price: 150,
   },
   {
     food_id: 26,
@@ -236,6 +261,7 @@ export const get_food_details = [
     star: 1,
     description: "Beef and mushroom stroganoff with egg noodles",
     timing: "Lunch",
+    price: 150,
   },
   {
     food_id: 27,
@@ -245,6 +271,7 @@ export const get_food_details = [
     star: 4,
     description: "Chicken Caesar wrap with chips",
     timing: "Dinner",
+    price: 150,
   },
   {
     food_id: 28,
@@ -254,6 +281,7 @@ export const get_food_details = [
     star: 5,
     description: "Lobster bisque with garlic bread",
     timing: "break-fast",
+    price: 150,
   },
   {
     food_id: 29,
@@ -263,6 +291,7 @@ export const get_food_details = [
     star: 2,
     description: "Vegan chili with cornbread",
     timing: "Lunch",
+    price: 150,
   },
   {
     food_id: 30,
@@ -272,5 +301,6 @@ export const get_food_details = [
     star: 3,
     description: "Beef and vegetable soup with crusty bread",
     timing: "Dinner",
+    price: 150,
   },
 ];

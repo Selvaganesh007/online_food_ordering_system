@@ -1,14 +1,13 @@
 import React from "react";
-import { Dropdown } from "../../components/Dropdown/Dropdown";
-import { Button } from "../../components/Button/Button";
-import { Radio } from "../../components/Radio/Radio";
+import { Dropdown } from "../../../../components/Dropdown/Dropdown";
+import { Radio } from "../../../../components/Radio/Radio";
+import { Button } from "../../../../components/Button/Button";
 import { useNavigate } from "react-router-dom";
 import "./Header.css";
 const Header = () => {
   const navigate = useNavigate();
   const handleCart = () => {
-    navigate("/cart");
-    console.log("hi");
+    navigate("/add-cart");
   };
   return (
     <div className="nav">

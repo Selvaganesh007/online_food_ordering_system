@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import "./Cards.css";
 import { useDispatch } from "react-redux";
 import { addCart } from "../../features/Addcartprop";
-import { useNavigate } from "react-router-dom";
 import { Button } from "../Button/Button.js";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const Cards = ({ items }) => {
+  const rupees = "₹";
   const [count, setCount] = useState(0);
   const dispatch = useDispatch();
-  const navigate = useNavigate();
-  // const cartvalue = useSelector((state) => state.addCart.value);
   const buttonAdd = () => {
     setCount(count + 1);
   };
@@ -18,9 +18,12 @@ export const Cards = ({ items }) => {
   };
 
   const handleAddCart = () => {
-    console.log(items);
-    const cartDetails = [{ ...items, Quantity: count }];
+    const cartDetails = Object.assign({}, items, { count: count });
     console.log(dispatch(addCart(cartDetails)));
+    toast.success("added to cart successfully", {
+      position: toast.POSITION.TOP_CENTER,
+      autoClose: 3000,
+    });
   };
 
   return (
@@ -31,6 +34,10 @@ export const Cards = ({ items }) => {
         <h4>Reviews: {items.reviews}</h4>
         <h4>Timing: {items.timing}</h4>
         <h4>Star: {items.star}</h4>
+        <h4>
+          Price: {rupees}
+          {items.price}
+        </h4>
         <div className="card-buttons">
           <button onClick={buttonSub} className="button-2">
             -
@@ -40,9 +47,7 @@ export const Cards = ({ items }) => {
             +
           </button>
           <Button buttonName="Add To Cart" onClick={handleAddCart} />
-          {/* <button onClick={() => HandleCart(items)} className="addcartbtn">
-            Add To Cart
-          </button> */}
+          <ToastContainer />
         </div>
       </div>
     </div>
