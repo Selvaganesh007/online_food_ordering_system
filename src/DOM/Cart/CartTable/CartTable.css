@@ -2,6 +2,8 @@
   width: 400px;
   border-collapse: collapse;
   margin-top: 20px;
+  position: sticky;
+  margin-right: 3rem;
 }
 
 .carttable td,
@@ -18,4 +20,7 @@
 }
 tr:hover {
   background-color: rgb(195, 190, 188);
+}
+tr:nth-child(even) {
+  background-color: #e5e5e5;
 }

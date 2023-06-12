@@ -40,7 +40,7 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <div>
+      <div style={{ paddingLeft: "40px" }}>
         {foodDetails.map((items) => {
           return <Cards items={items} count={0} />;
         })}

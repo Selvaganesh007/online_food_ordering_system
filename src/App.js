@@ -17,11 +17,11 @@ const store = configureStore({
 
 function App() {
   return (
-    <>
+    <div>
       <Provider store={store}>
         <Base />
       </Provider>
-    </>
+    </div>
   );
 }
 
