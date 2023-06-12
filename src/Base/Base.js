@@ -3,6 +3,7 @@ import Home from "../DOM/Home/Home";
 import "./Base.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Cart from "../DOM/Cart/Cart.js";
+
 export const Base = () => {
   return (
     <Router>

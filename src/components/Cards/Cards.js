@@ -10,6 +10,7 @@ export const Cards = ({ items }) => {
   const finalcart = useSelector((state) => state.addCart.cartItems);
   const [count, setCount] = useState(0);
   const dispatch = useDispatch();
+
   const buttonAdd = () => {
     setCount(count + 1);
   };

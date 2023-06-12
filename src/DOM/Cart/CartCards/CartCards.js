@@ -3,12 +3,17 @@ import { Button } from "../../../components/Button/Button";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
+
 const CartCards = () => {
-  const addCartDetails = useSelector((state) => state.addCart.cartItems);
+  let addCartDetails = useSelector((state) => state.addCart.cartItems);
   console.log(addCartDetails);
+  let stateCount = addCartDetails.map((items, index) => {
+    return items.count;
+  });
+  const [cards, setCards] = useState(addCartDetails);
   const [cartCount, setCartCount] = useState(0);
   useEffect(() => {
-    setCartCount(addCartDetails.count);
+    setCartCount(stateCount);
   }, []);
   const buttonSub = () => {
     setCartCount(cartCount - 1);
@@ -16,9 +21,18 @@ const CartCards = () => {
   const buttonAdd = () => {
     setCartCount(cartCount + 1);
   };
+
+  const removeCard = (id) => {
+    setCards((prevcards) =>
+      prevcards.filter((cards) => {
+        return cards.food_id !== id;
+      })
+    );
+    console.log(cards);
+  };
   return (
     <div>
-      {addCartDetails.map((cartItems, ind) => {
+      {cards.map((cartItems) => {
         return (
           <div className="card-row">
             <div className="card">
@@ -36,7 +50,10 @@ const CartCards = () => {
                 <button onClick={buttonAdd} className="button-2">
                   +
                 </button>
-                <Button buttonName="Remove" />
+                <Button
+                  buttonName="Remove"
+                  onClick={() => removeCard(cartItems.food_id)}
+                />
               </div>
             </div>
           </div>
