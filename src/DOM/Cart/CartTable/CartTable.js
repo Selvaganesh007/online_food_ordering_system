@@ -1,11 +1,8 @@
 import React from "react";
 import "./CartTable.css";
-import { useSelector } from "react-redux";
 
-const CardTable = () => {
-  const addCartDetails = useSelector((state) => state.addCart.cartItems);
-  console.log(addCartDetails);
-  const total = addCartDetails.reduce(
+const CardTable = ({ cards }) => {
+  const total = cards.reduce(
     (total, items) => total + items.count * items.price,
     0
   );
@@ -21,7 +18,7 @@ const CardTable = () => {
           </tr>
         </thead>
         <tbody>
-          {addCartDetails.map((items) => {
+          {cards.map((items) => {
             return (
               <>
                 <tr>

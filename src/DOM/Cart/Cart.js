@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import CartCards from "./CartCards/CartCards";
 import { useSelector } from "react-redux";
 import CardTable from "./CartTable/CartTable";
@@ -6,11 +6,22 @@ import "./Cart.css";
 
 const Cart = () => {
   const addCartDetails = useSelector((state) => state.addCart.cartItems);
-  console.log(addCartDetails);
+  const [cards, setCards] = useState(addCartDetails);
+  function removeCard(id) {
+    setCards((prevcards) =>
+      prevcards.filter((cards) => {
+        return cards.food_id !== id;
+      })
+    );
+    console.log(cards);
+  }
   return (
     <div className="cart">
-      <CartCards cartItems={addCartDetails} />
-      <CardTable />
+      {cards.map((items) => {
+        return <CartCards cartItems={items} removeCard={removeCard} />;
+      })}
+
+      <CardTable cards={cards} />
     </div>
   );
 };
