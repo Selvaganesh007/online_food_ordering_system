@@ -34,6 +34,11 @@ export const Cards = ({ items }) => {
         position: toast.POSITION.TOP_CENTER,
         autoClose: 3000,
       });
+    } else {
+      toast.info("atleast add one item to the cart", {
+        position: toast.POSITION.TOP_CENTER,
+        autoClose: 3000,
+      });
     }
   };
 

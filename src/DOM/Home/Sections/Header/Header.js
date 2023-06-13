@@ -9,12 +9,16 @@ const Header = () => {
   const handleCart = () => {
     navigate("/add-cart");
   };
+  const handleLogin = () => {
+    navigate("/login");
+  };
   return (
     <div className="nav">
       <h1>Tamil Feast</h1>
       <Radio className="radio" />
       <Dropdown className="drpdwn" />
       <Button buttonName="cart" onClick={handleCart} />
+      <Button buttonName="Login" onClick={handleLogin} />
     </div>
   );
 };

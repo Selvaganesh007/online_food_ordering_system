@@ -2,7 +2,7 @@ import React from "react";
 import { food_category } from "../../MockData/mockData.js";
 import { OptionValue } from "../../features/Radioprop.js";
 import { useDispatch } from "react-redux";
-
+import "./Radio.css";
 export const Radio = () => {
   const dispatch = useDispatch();
   return (
