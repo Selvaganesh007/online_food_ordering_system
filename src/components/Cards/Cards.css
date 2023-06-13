@@ -1,7 +1,6 @@
 /* Cards.css */
 
 .card-row {
-  padding-right: 25px;
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -59,14 +58,4 @@
   display: inline-block;
   font-size: 16px;
   margin: 0 10px;
-}
-
-.addcartbtn {
-  padding: 5px 10px;
-  border-radius: 7px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  margin-right: 20px;
 }

@@ -1,19 +1,23 @@
 import React from "react";
-import Header from "../DOM/Header/Header.js";
-import Footer from "../DOM/Home/Sections/Footer/Footer.js";
-import Body from "../DOM/Home/Home.js";
+import Home from "../DOM/Home/Home";
 import "./Base.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Button } from "../components/Button/Button.js";
 import Cart from "../DOM/Cart/Cart.js";
+import { Error } from "../MockData/Error";
+import { Login } from "../components/Login/Login";
+import { SignUp } from "../components/Register/SignUp";
+
 export const Base = () => {
   return (
     <Router>
       <div className="base">
         {/* <Header /> */}
         <Routes>
-          <Route path="/" element={<Body />} />
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/add-cart" element={<Cart />} />
+          <Route path="/sign-in" element={<SignUp />} />
+          <Route path="*" element={<Error />} />
         </Routes>
         {/* <Footer /> */}
       </div>
