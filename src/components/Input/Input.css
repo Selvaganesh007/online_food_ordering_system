@@ -20,7 +20,9 @@ input {
 input[type="text"],
 input[type="password"],
 input[type="number"],
-input[type="email"] {
+input[type="email"],
+input[type="address"],
+input[type="landmark"] {
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;

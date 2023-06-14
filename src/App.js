@@ -6,6 +6,7 @@ import dropdownReducer from "./features/Dropdownprop.js";
 import themeReducer from "./features/Radioprop.js";
 import CartReducer from "./features/Addcartprop.js";
 import signinUserReducer from "./features/SignInUser.js";
+import loginReducer from "./features/LoginUser.js";
 // import "./App.css";
 
 const store = configureStore({
@@ -14,6 +15,7 @@ const store = configureStore({
     radio: themeReducer,
     addCart: CartReducer,
     signinUser: signinUserReducer,
+    loginUser: loginReducer,
   },
 });
 

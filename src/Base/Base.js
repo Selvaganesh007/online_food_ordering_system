@@ -13,8 +13,8 @@ export const Base = () => {
       <div className="base">
         {/* <Header /> */}
         <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Login />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/add-cart" element={<Cart />} />
           <Route path="/sign-in" element={<SignUp />} />
           <Route path="*" element={<Error />} />
