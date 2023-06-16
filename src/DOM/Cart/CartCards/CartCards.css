@@ -6,6 +6,7 @@
   background-color: rgb(224, 100, 100);
   padding: 3px;
   margin-bottom: 20px;
+  padding-bottom: 15px;
 }
 .cart-card-foodname {
   text-align: center;
@@ -28,14 +29,25 @@ img.cart-food-img {
   display: flex;
   justify-content: space-evenly;
 }
-.cart-count {
-}
+
 .cart-buttonPlus {
+  font-size: 20px;
+  padding: 8px 13px;
+  border-radius: 50%;
+  background-color: rgb(36, 135, 211);
+  border: 1px solid rgb(36, 135, 211);
 }
 .cart-buttonMinus {
+  font-size: 20px;
+  padding: 8px 13px;
+  border-radius: 50%;
+  background-color: rgb(36, 135, 211);
+  border: 1px solid rgb(36, 135, 211);
 }
-.cart-Remove {
-}
+
 .info-card {
   padding: 5px;
+}
+.count-button {
+  display: flex;
 }

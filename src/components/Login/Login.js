@@ -97,7 +97,7 @@ export const Login = () => {
             </p>
           )}
           <p>
-            if you dont have an account{" "}
+            if you dont have an account
             <span>
               <Link to="/sign-in">
                 <strong>sign up</strong>

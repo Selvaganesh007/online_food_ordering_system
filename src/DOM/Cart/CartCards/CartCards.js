@@ -10,11 +10,10 @@ const CartCards = ({ cartItems, removeCard }) => {
     setCartCount(cartCount + 1);
   };
   const style1 = {
-    padding: "8px 11px",
+    padding: "12px 25px",
     color: "white",
     fontWeight: "bold",
-    backgroundColor: "#4387bf",
-    borderRadius: "10px",
+    borderRadius: "20px",
     border: "#4387bf",
     cursor: "pointer",
     fontSize: "12px",
@@ -31,23 +30,23 @@ const CartCards = ({ cartItems, removeCard }) => {
         <h2 className="cart-card-foodname cart-cardtext">
           {cartItems.food_name}
         </h2>
-
         <p className="cart-card-food-about cart-cardtext">{cartItems.about}</p>
       </div>
       <div className="cart-card-buttons ">
-        <button onClick={buttonSub} className="cart-buttonMinus cart-cardtext">
+        <button onClick={buttonSub} className="cart-buttonMinus cardtext">
           -
         </button>
-        <p className="cart-count cart-cardtext">{cartCount}</p>
-        <button onClick={buttonAdd} className="cart-buttonPlus cart-cardtext">
+        <p className="count cardtext">{cartCount}</p>
+        <button onClick={buttonAdd} className="cart-buttonPlus cardtext">
           +
         </button>
-
-        <Button
-          buttonName="Remove"
-          onClick={() => removeCard(cartItems.food_id)}
-          style={style1}
-        />
+        <div>
+          <Button
+            buttonName="REMOVE"
+            onClick={() => removeCard(cartItems.food_id)}
+            style={style1}
+          />
+        </div>
       </div>
     </div>
   );

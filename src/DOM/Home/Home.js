@@ -7,6 +7,7 @@ import Footer from "./Sections/Footer/Footer";
 import "./Home.css";
 import { Bakery } from "../../components/Bakery/Bakery.js";
 import { Endpage } from "../../components/Endpage/Endpage";
+import { MainCarosel } from "../../components/carosel/MainCarosel";
 
 const Home = () => {
   const [foodDetails, SetfoodDetails] = useState([]);
@@ -44,6 +45,9 @@ const Home = () => {
   return (
     <div className="home">
       <Header />
+      <div className="carosel">
+        <MainCarosel />
+      </div>
       <div className="card-row">
         {foodDetails.map((items) => {
           return <Cards items={items} />;

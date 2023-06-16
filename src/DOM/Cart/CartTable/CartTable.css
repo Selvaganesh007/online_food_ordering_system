@@ -1,27 +1,37 @@
 .carttable {
-  width: 400px;
+  width: 500px;
   border-collapse: collapse;
-  box-shadow: 0px 8px 16px #ddd;
+  margin-right: 3rem;
+  table-layout: auto;
+}
+
+.carttable .cart-data,
+.carttable .cart-head {
+  text-align: left;
+  padding: 10px 15px;
+}
+
+.carttable .cart-head {
+  background-color: #70a5cd;
+  color: white;
+  border-right: 1px solid white;
+}
+
+.cart-header {
+  font-size: 30px;
+}
+.cart-total {
+  text-align: left;
+  padding: 10px 15px;
+}
+.cart-amonut {
+  text-align: left;
+  padding: 10px 15px;
+}
+.cart-data {
+  border-bottom: 1px solid black;
+}
+.carttable-container {
   position: sticky;
   top: 20px;
-  margin-right: 3rem;
-}
-
-.carttable td,
-.carttable th {
-  text-align: center;
-  border: 2px solid #ddd;
-  padding: 8px;
-}
-
-.carttable th {
-  text-align: center;
-  background-color: #2fc648;
-  color: white;
-}
-tr:hover {
-  background-color: rgb(195, 190, 188);
-}
-tr:nth-child(even) {
-  background-color: #e5e5e5;
 }

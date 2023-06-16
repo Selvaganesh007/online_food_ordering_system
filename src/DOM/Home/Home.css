@@ -12,3 +12,7 @@
     rgba(88, 152, 196, 1) 69%
   );
 }
+.carosel {
+  height: 100vh;
+  padding-bottom: 50px;
+}
