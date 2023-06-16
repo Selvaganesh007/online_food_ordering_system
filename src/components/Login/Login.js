@@ -68,7 +68,7 @@ export const Login = () => {
     }
   };
   return (
-    <div className="container" style={{ backgroundColor: "skyblue" }}>
+    <div className="container">
       <div className="form">
         <h1>Login </h1>
         <form onSubmit={handleSubmit}>

@@ -6,21 +6,9 @@ import { signInUserDetails } from "../../features/SignInUser";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import { initialUserData } from "./Helper/Helper";
 export const SignUp = () => {
-  const [userData, setUserData] = useState({
-    userid: 0,
-    username: "",
-    password: "",
-    phoneNumber: "",
-    email: "",
-    address: "",
-    landmark: "",
-    usernameValid: true,
-    phoneNumberValid: true,
-    emailValid: true,
-    passwordValid: true,
-  });
+  const [userData, setUserData] = useState(initialUserData);
 
   const dispatch = useDispatch();
   const user = useSelector((state) => state.signinUser.userDetails);
@@ -65,18 +53,7 @@ export const SignUp = () => {
         autoClose: 3000,
       });
     } else {
-      setUserData({
-        username: "",
-        password: "",
-        phoneNumber: "",
-        email: "",
-        address: "",
-        landmark: "",
-        usernameValid: true,
-        phoneNumberValid: true,
-        emailValid: true,
-        passwordValid: true,
-      });
+      setUserData(initialUserData);
     }
   };
 
@@ -171,7 +148,7 @@ export const SignUp = () => {
           />
           <br />
           <p>
-            if you already have an account{" "}
+            if you already have an account
             <span>
               <Link to="/">
                 <strong>Log in</strong>

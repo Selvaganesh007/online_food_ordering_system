@@ -1,4 +1,14 @@
 .cart {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  padding-top: 30px;
+}
+.cart-container {
+  height: 100vh;
+  background: rgb(157, 190, 212);
+  background: linear-gradient(
+    90deg,
+    rgba(157, 190, 212, 1) 0%,
+    rgba(233, 233, 233, 1) 76%
+  );
 }

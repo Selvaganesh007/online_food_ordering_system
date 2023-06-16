@@ -1,0 +1,11 @@
+.end-page {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: rgb(233, 233, 233);
+  background-image: linear-gradient(
+    180deg,
+    rgba(88, 152, 196, 1) 0%,
+    rgba(233, 233, 233, 1) 69%
+  );
+}

@@ -1,10 +1,20 @@
 .nav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 60px;
-  background-color: rgb(90, 233, 166);
+  background: rgb(88, 152, 196);
+  background: linear-gradient(
+    90deg,
+    rgba(88, 152, 196, 1) 42%,
+    rgba(233, 233, 233, 1) 88%
+  );
 }
-
-div h1 {
-  margin: 20px;
+.title {
+  margin-left: 50px;
+  color: black;
+}
+.no-title {
+  display: flex;
+  align-items: center;
 }

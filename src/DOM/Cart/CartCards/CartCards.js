@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "../../../components/Button/Button";
-
+import "./CartCards.css";
 const CartCards = ({ cartItems, removeCard }) => {
   const [cartCount, setCartCount] = useState(cartItems.count);
   const buttonSub = () => {
@@ -9,30 +9,45 @@ const CartCards = ({ cartItems, removeCard }) => {
   const buttonAdd = () => {
     setCartCount(cartCount + 1);
   };
+  const style1 = {
+    padding: "8px 11px",
+    color: "white",
+    fontWeight: "bold",
+    backgroundColor: "#4387bf",
+    borderRadius: "10px",
+    border: "#4387bf",
+    cursor: "pointer",
+    fontSize: "12px",
+    backgroundColor: "black",
+  };
   return (
-    <div>
-      <div className="card-row">
-        <div className="card">
-          <h2>Food name: {cartItems.food_name}</h2>
-          <h4>Food category: {cartItems.food_category}</h4>
-          <h4>Reviews: {cartItems.reviews}</h4>
-          <h4>Timing: {cartItems.timing}</h4>
-          <h4>Star: {cartItems.star}</h4>
-          <h4>Price: ₹{cartItems.price}</h4>
-          <div className="card-buttons">
-            <button onClick={buttonSub} className="button-2">
-              -
-            </button>
-            <p>{cartCount}</p>
-            <button onClick={buttonAdd} className="button-2">
-              +
-            </button>
-            <Button
-              buttonName="Remove"
-              onClick={() => removeCard(cartItems.food_id)}
-            />
-          </div>
-        </div>
+    <div className="cart-card">
+      <div className="info-card">
+        <img
+          src={cartItems.imageLink}
+          alt={cartItems.food_name}
+          className="cart-food-img"
+        />
+        <h2 className="cart-card-foodname cart-cardtext">
+          {cartItems.food_name}
+        </h2>
+
+        <p className="cart-card-food-about cart-cardtext">{cartItems.about}</p>
+      </div>
+      <div className="cart-card-buttons ">
+        <button onClick={buttonSub} className="cart-buttonMinus cart-cardtext">
+          -
+        </button>
+        <p className="cart-count cart-cardtext">{cartCount}</p>
+        <button onClick={buttonAdd} className="cart-buttonPlus cart-cardtext">
+          +
+        </button>
+
+        <Button
+          buttonName="Remove"
+          onClick={() => removeCard(cartItems.food_id)}
+          style={style1}
+        />
       </div>
     </div>
   );

@@ -41,27 +41,44 @@ export const Cards = ({ items }) => {
       });
     }
   };
-
+  const style = {
+    padding: "8px 11px",
+    color: "white",
+    fontWeight: "bold",
+    backgroundColor: "#4387bf",
+    borderRadius: "10px",
+    border: "#4387bf",
+    cursor: "pointer",
+    fontSize: "12px",
+    boxShadow:
+      " 0 8px 16px 2px rgba(0,0,0,0.2), 0 6px 21px 5px rgba(0,0,0,0.19)",
+  };
   return (
-    <div className="card-row">
-      <div className="card">
-        <h2>Food name: {items.food_name}</h2>
-        <h4>Food category: {items.food_category}</h4>
-        <h4>Reviews: {items.reviews}</h4>
-        <h4>Timing: {items.timing}</h4>
-        <h4>Star: {items.star}</h4>
-        <h4>Price: ₹{items.price}</h4>
-        <div className="card-buttons">
-          <button onClick={buttonSub} className="button-2">
-            -
-          </button>
-          <p>{count}</p>
-          <button onClick={buttonAdd} className="button-2">
-            +
-          </button>
-          <Button buttonName="Add To Cart" onClick={handleAddCart} />
-          <ToastContainer theme="dark" />
-        </div>
+    <div className="card">
+      <h2 className="card-foodname cardtext">{items.food_name}</h2>
+      <img src={items.imageLink} alt={items.food_name} className="food-img" />
+      <p className="card-food-about cardtext">{items.about}</p>
+      <div className="star-price cardtext">
+        <h4> {items.star}</h4>
+        <h4 className="food-reviews cardtext"> {items.reviews}</h4>
+
+        <h4 className="price cardtext">₹{items.price}</h4>
+      </div>
+      <div className="card-buttons ">
+        <button onClick={buttonSub} className="buttonMinus cardtext">
+          -
+        </button>
+        <p className="count cardtext">{count}</p>
+        <button onClick={buttonAdd} className="buttonPlus cardtext">
+          +
+        </button>
+
+        <Button
+          buttonName="ADD TO CART"
+          onClick={handleAddCart}
+          style={style}
+        />
+        <ToastContainer theme="dark" />
       </div>
     </div>
   );

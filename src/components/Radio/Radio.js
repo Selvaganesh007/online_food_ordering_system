@@ -9,7 +9,7 @@ export const Radio = () => {
     <div style={{ margin: "20px" }}>
       {food_category.map((item) => {
         return (
-          <>
+          <div style={{ display: "inline" }}>
             <input
               type="radio"
               value={item}
@@ -19,7 +19,7 @@ export const Radio = () => {
               }}
             />
             <label>{item}</label>{" "}
-          </>
+          </div>
         );
       })}
     </div>

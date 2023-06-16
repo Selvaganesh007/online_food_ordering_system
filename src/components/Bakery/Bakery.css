@@ -1,0 +1,33 @@
+.bakery-page {
+  margin: 0;
+  padding: 0;
+  height: 60vh;
+  position: relative;
+}
+
+.bg-img {
+  width: 100%;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-position: center center;
+  height: 60vh;
+}
+
+.heading {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-size: 50px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  bottom: 180px;
+}

@@ -1,5 +1,25 @@
 .footer {
-  background-color: rgb(255, 159, 127);
-  height: 60px;
+  background-color: rgb(241, 235, 233);
+  height: 130px;
   position: sticky;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+.location {
+  font-size: 30px;
+  margin: 0;
+}
+.follow {
+  margin: 0;
+}
+.address {
+  font-size: 20px;
+}
+.head {
+  font-size: 30px;
+}
+.icons {
+  margin-top: 10px;
+  align-content: center;
 }

@@ -5,6 +5,7 @@ import CardTable from "./CartTable/CartTable";
 import { useDispatch } from "react-redux";
 import "./Cart.css";
 import { removeCart } from "../../features/Addcartprop";
+import Header from "../Home/Sections/Header/Header";
 
 const Cart = () => {
   const addCartDetails = useSelector((state) => state.addCart.cartItems);
@@ -21,12 +22,18 @@ const Cart = () => {
   }
   console.log(cards);
   return (
-    <div className="cart">
-      {cards.map((items) => {
-        return <CartCards cartItems={items} removeCard={removeCard} />;
-      })}
-
-      <CardTable cards={cards} />
+    <div className="cart-container">
+      <Header />
+      <div className="cart">
+        <div>
+          {cards.map((items) => {
+            return <CartCards cartItems={items} removeCard={removeCard} />;
+          })}
+        </div>
+        <div>
+          <CardTable cards={cards} />
+        </div>
+      </div>
     </div>
   );
 };
