@@ -19,7 +19,7 @@ img.cart-food-img {
   float: left;
   border-radius: 20px;
   width: 200px;
-  height: 130px;
+  height: 140px;
   object-fit: cover;
   margin-top: 20px;
   margin-right: 10px;
@@ -27,19 +27,21 @@ img.cart-food-img {
 }
 .cart-card-buttons {
   display: flex;
-  justify-content: space-evenly;
 }
 
 .cart-buttonPlus {
+  margin-right: 20px;
   font-size: 20px;
   padding: 8px 13px;
+  margin-left: 20px;
   border-radius: 50%;
   background-color: rgb(36, 135, 211);
   border: 1px solid rgb(36, 135, 211);
 }
 .cart-buttonMinus {
+  margin-left: 20px;
   font-size: 20px;
-  padding: 8px 13px;
+  padding: 8px 15px;
   border-radius: 50%;
   background-color: rgb(36, 135, 211);
   border: 1px solid rgb(36, 135, 211);
@@ -48,6 +50,12 @@ img.cart-food-img {
 .info-card {
   padding: 5px;
 }
-.count-button {
+
+.btn-2 {
   display: flex;
+  margin-left: 15px;
+}
+
+.cart-count {
+  margin-left: 20px;
 }

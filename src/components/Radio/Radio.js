@@ -6,11 +6,12 @@ import "./Radio.css";
 export const Radio = () => {
   const dispatch = useDispatch();
   return (
-    <div style={{ margin: "20px" }}>
+    <div>
       {food_category.map((item) => {
         return (
-          <div style={{ display: "inline" }}>
+          <div className="radio-div">
             <input
+              className="radio-label "
               type="radio"
               value={item}
               name="foodCategory"
@@ -18,7 +19,7 @@ export const Radio = () => {
                 dispatch(OptionValue(e.target.value));
               }}
             />
-            <label>{item}</label>{" "}
+            <label className="radio-label ">{item}</label>{" "}
           </div>
         );
       })}

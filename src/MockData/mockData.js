@@ -424,3 +424,25 @@ export const get_food_details = [
     price: 65,
   },
 ];
+
+export const carouselItems = [
+  {
+    image:
+      "https://images.pexels.com/photos/1639562/pexels-photo-1639562.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    paragraph: "This is the first image.",
+    buttonText: "Learn More",
+  },
+  {
+    image:
+      "https://images.pexels.com/photos/1600711/pexels-photo-1600711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    paragraph: "This is the second image.",
+    buttonText: "Discover More",
+  },
+  {
+    image:
+      "https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    paragraph: "This is the second image.",
+    buttonText: "Discover More",
+  },
+  // Add more carousel items as needed
+];

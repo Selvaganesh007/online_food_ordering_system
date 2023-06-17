@@ -1,25 +1,33 @@
 .footer {
   background-color: rgb(241, 235, 233);
-  height: 130px;
-  position: sticky;
   display: flex;
-  justify-content: space-evenly;
-  position: relative;
+  justify-content: space-around;
 }
-.location {
-  font-size: 30px;
-  margin: 0;
+.icon {
+  padding-left: 10px;
+}
+.location-container {
+  text-align: left;
+  margin-left: 40px;
+  width: 50%;
 }
 .follow {
-  margin: 0;
+  text-align: left;
+  margin-bottom: 50px;
+  width: 50%;
 }
-.address {
-  font-size: 20px;
+.location {
+  text-align: left;
+  font-size: 30px;
+  margin: 10px 0px;
 }
 .head {
   font-size: 30px;
+  margin: 10px 0px;
 }
-.icons {
-  margin-top: 10px;
-  align-content: center;
+.address {
+  text-align: left;
+}
+.privacy {
+  text-align: left;
 }

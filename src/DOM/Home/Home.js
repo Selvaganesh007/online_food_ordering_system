@@ -8,6 +8,7 @@ import "./Home.css";
 import { Bakery } from "../../components/Bakery/Bakery.js";
 import { Endpage } from "../../components/Endpage/Endpage";
 import { MainCarosel } from "../../components/carosel/MainCarosel";
+import { Radio } from "../../components/Radio/Radio.js";
 
 const Home = () => {
   const [foodDetails, SetfoodDetails] = useState([]);
@@ -48,6 +49,7 @@ const Home = () => {
       <div className="carosel">
         <MainCarosel />
       </div>
+      <Radio />
       <div className="card-row">
         {foodDetails.map((items) => {
           return <Cards items={items} />;

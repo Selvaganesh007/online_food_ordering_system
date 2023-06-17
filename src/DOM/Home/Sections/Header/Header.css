@@ -12,10 +12,25 @@
   box-shadow: 0px 10px 19px 0px rgba(113, 104, 104, 0.75);
 }
 .title {
+  font-family: Arial, Helvetica, sans-serif;
   margin-left: 50px;
   color: black;
+  font-size: 25px;
 }
 .no-title {
   display: flex;
   align-items: center;
+  position: relative;
+  right: 60px;
+}
+div > .elements {
+  margin-left: 30px;
+}
+.text-link {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(53, 52, 52);
+  text-decoration: inherit;
+}
+.text-link:hover {
+  color: rgb(198, 127, 66);
 }

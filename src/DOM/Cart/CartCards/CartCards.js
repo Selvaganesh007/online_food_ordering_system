@@ -17,6 +17,7 @@ const CartCards = ({ cartItems, removeCard }) => {
     border: "#4387bf",
     cursor: "pointer",
     fontSize: "12px",
+    marginLeft: "60px",
     backgroundColor: "black",
   };
   return (
@@ -33,13 +34,15 @@ const CartCards = ({ cartItems, removeCard }) => {
         <p className="cart-card-food-about cart-cardtext">{cartItems.about}</p>
       </div>
       <div className="cart-card-buttons ">
-        <button onClick={buttonSub} className="cart-buttonMinus cardtext">
-          -
-        </button>
-        <p className="count cardtext">{cartCount}</p>
-        <button onClick={buttonAdd} className="cart-buttonPlus cardtext">
-          +
-        </button>
+        <div className="btn-2">
+          <button onClick={buttonSub} className="cart-buttonMinus cardtext">
+            -
+          </button>
+          <p className="cart-count cardtext">{cartCount}</p>
+          <button onClick={buttonAdd} className="cart-buttonPlus cardtext">
+            +
+          </button>
+        </div>
         <div>
           <Button
             buttonName="REMOVE"
