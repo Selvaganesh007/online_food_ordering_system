@@ -1,7 +1,6 @@
 .nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   height: 60px;
   background: rgb(88, 152, 196);
   background: linear-gradient(
@@ -13,15 +12,10 @@
 }
 .title {
   font-family: Arial, Helvetica, sans-serif;
-  margin-left: 50px;
+  text-align: left;
+  margin-left: 4%;
   color: black;
   font-size: 25px;
-}
-.no-title {
-  display: flex;
-  align-items: center;
-  position: relative;
-  right: 60px;
 }
 div > .elements {
   margin-left: 30px;
@@ -33,4 +27,63 @@ div > .elements {
 }
 .text-link:hover {
   color: rgb(198, 127, 66);
+}
+.nav-links {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 35px;
+}
+.navbar-links {
+  display: flex;
+}
+.nav-buttons {
+  display: flex;
+  align-items: center;
+}
+.nav-title {
+  width: 50%;
+}
+.nav-buttons {
+  display: flex;
+}
+.linkelements {
+  margin-left: 20px;
+}
+.links {
+  display: flex;
+}
+.navbar-toggler {
+  cursor: pointer;
+}
+.nav-li {
+  list-style: none;
+}
+.navbar-toggler {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+  .navbar-toggler {
+    display: block;
+  }
+  .nav-on {
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 50%;
+    height: 70vh;
+    border-right-width: 1px;
+    background-color: skyblue;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+  }
+  .nav-off {
+    position: relative;
+    left: -100%;
+  }
 }

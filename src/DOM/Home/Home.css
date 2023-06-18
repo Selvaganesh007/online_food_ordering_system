@@ -2,9 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 30px;
+
   padding-bottom: 30px;
-  margin-left: 100px;
 }
 .home {
   background: rgb(233, 233, 233);
@@ -15,5 +14,5 @@
   );
 }
 .carosel {
-  height: 100vh;
+  height: 80vh;
 }

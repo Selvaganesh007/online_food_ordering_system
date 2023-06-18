@@ -1,16 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 import { Button } from "../../../../components/Button/Button";
 import { Link, useNavigate } from "react-router-dom";
+import { FaBars } from "react-icons/fa";
 
 const Header = () => {
   const navigate = useNavigate();
+  const [showMenu, setShowMenu] = useState(false);
+
   const handleCart = () => {
     navigate("/add-cart");
   };
   const handleLogin = () => {
     navigate("/login");
   };
+
+  const handleMenuToggle = () => {
+    setShowMenu(!showMenu);
+  };
+
   const style = {
     padding: "8px 20px",
     color: "white",
@@ -25,33 +33,50 @@ const Header = () => {
   };
   return (
     <div className="nav">
-      <div>
+      <div className="nav-title">
         <h1 className="title">Anand Sweets</h1>
       </div>
-      <div className="no-title">
-        {/* <Radio className="radio" />
-        <Dropdown className="drpdwn" /> */}
-        <Link className="elements text-link" to="/home">
-          Home
-        </Link>
-        <Link className="elements text-link" to="/about">
-          About
-        </Link>
-        <Link className="elements text-link" to="/Contact">
-          Contact
-        </Link>
-        <Button
-          buttonName="cart "
-          className="elements"
-          onClick={handleCart}
-          style={style}
-        />
-        <Button
-          style={style}
-          buttonName="Login "
-          className="elements"
-          onClick={handleLogin}
-        />
+      <div className="nav-links">
+        <ul className={`navbar-links ${showMenu ? "show" : ""}`}>
+          <div className="links">
+            <li className="nav-li">
+              <Link className="linkelements text-link" to="/home">
+                Home
+              </Link>
+            </li>
+            <li className="nav-li">
+              <Link className="linkelements text-link" to="/about">
+                About
+              </Link>
+            </li>
+            <li className="nav-li">
+              <Link className="linkelements text-link" to="/Contact">
+                Contact
+              </Link>
+            </li>
+          </div>
+        </ul>
+        <div className="nav-buttons">
+          <Button
+            buttonName="cart "
+            className="elements"
+            onClick={handleCart}
+            style={style}
+          />
+          <Button
+            style={style}
+            buttonName="Login "
+            className="elements"
+            onClick={handleLogin}
+          />
+        </div>
+        <div className="togglebar">
+          <FaBars
+            size="25px"
+            className="navbar-toggler elements"
+            onClick={handleMenuToggle}
+          />
+        </div>
       </div>
     </div>
   );

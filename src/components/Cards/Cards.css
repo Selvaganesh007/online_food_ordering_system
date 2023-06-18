@@ -1,10 +1,10 @@
 .card {
   text-align: center;
   border-radius: 40px;
-  padding: 20px;
   box-shadow: 0 4px 8px 0px rgba(173, 66, 66, 0.858);
   transition: 0.3s;
   width: 300px;
+  padding: 20px 10px;
   margin: 20px 20px;
   background-color: rgba(173, 66, 66, 0.858);
 }
@@ -62,4 +62,7 @@
   border: #4387bf;
   padding: 7px 12px;
   border-radius: 50%;
+}
+.card-food-about {
+  margin-bottom: -8px;
 }

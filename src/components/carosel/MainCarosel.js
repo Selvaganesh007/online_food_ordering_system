@@ -6,7 +6,7 @@ import { CaroselTemp } from "./CaroselTemp";
 import { carouselItems } from "../../MockData/mockData";
 export const MainCarosel = () => {
   return (
-    <div>
+    <div className="maincarosel">
       <Carousel
         infiniteLoop={true}
         autoPlay={true}

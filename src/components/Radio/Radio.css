@@ -1,15 +1,18 @@
 .radio-label {
-  font-size: 20px;
-  color: black;
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  margin-left: 10px;
 }
 .radio-div {
-  height: 50px;
-  margin-bottom: 10px;
+  height: 10px;
   display: inline;
   float: right;
   position: relative;
   right: 40px;
 }
 .radio-lbl {
-  margin: 0px 10px;
+}
+.radio-container {
+  height: 3rem;
+  margin-top: 130px;
 }

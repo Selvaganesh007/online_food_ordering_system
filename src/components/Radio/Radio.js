@@ -6,7 +6,7 @@ import "./Radio.css";
 export const Radio = () => {
   const dispatch = useDispatch();
   return (
-    <div>
+    <div className="radio-container">
       {food_category.map((item) => {
         return (
           <div className="radio-div">
