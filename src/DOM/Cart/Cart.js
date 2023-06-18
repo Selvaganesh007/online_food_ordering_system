@@ -23,15 +23,19 @@ const Cart = () => {
   console.log(cards);
   return (
     <div className="cart-container">
-      <Header />
-      <div className="cart">
+      <div>
         <div>
-          {cards.map((items) => {
-            return <CartCards cartItems={items} removeCard={removeCard} />;
-          })}
-        </div>
-        <div>
-          <CardTable cards={cards} />
+          <Header />
+          <div className="cart">
+            <div>
+              {cards.map((items) => {
+                return <CartCards cartItems={items} removeCard={removeCard} />;
+              })}
+            </div>
+            <div>
+              <CardTable cards={cards} />
+            </div>
+          </div>
         </div>
       </div>
     </div>

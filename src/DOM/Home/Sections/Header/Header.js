@@ -1,7 +1,8 @@
 import React from "react";
+import "./Header.css";
 import { Button } from "../../../../components/Button/Button";
 import { Link, useNavigate } from "react-router-dom";
-import "./Header.css";
+
 const Header = () => {
   const navigate = useNavigate();
   const handleCart = () => {
@@ -30,9 +31,15 @@ const Header = () => {
       <div className="no-title">
         {/* <Radio className="radio" />
         <Dropdown className="drpdwn" /> */}
-        <Link className="elements text-link">Home</Link>
-        <Link className="elements text-link">About</Link>
-        <Link className="elements text-link">Contact</Link>
+        <Link className="elements text-link" to="/home">
+          Home
+        </Link>
+        <Link className="elements text-link" to="/about">
+          About
+        </Link>
+        <Link className="elements text-link" to="/Contact">
+          Contact
+        </Link>
         <Button
           buttonName="cart "
           className="elements"

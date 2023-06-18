@@ -8,13 +8,13 @@ const CardTable = ({ cards }) => {
   );
   return (
     <div className="carttable-container">
-      <h2 className="cart-header">Cart Details</h2>
+      <h4 className="cart-header">Cart Details</h4>
       <table className="carttable">
         <thead>
           <tr className="cart-row">
             <th className="cart-head">Food name</th>
             <th className="cart-head">Quantity</th>
-            <th className="cart-head">amount(per food)</th>
+            <th className="cart-head">amount (per food)</th>
             <th className="cart-head">amount</th>
           </tr>
         </thead>
