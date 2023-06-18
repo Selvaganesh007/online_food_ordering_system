@@ -1,5 +1,33 @@
 .footer {
-  background-color: rgb(255, 159, 127);
-  height: 60px;
-  position: sticky;
+  background-color: rgb(241, 235, 233);
+  display: flex;
+  justify-content: space-around;
+}
+.icon {
+  padding-left: 10px;
+}
+.location-container {
+  text-align: left;
+  margin-left: 40px;
+  width: 50%;
+}
+.follow {
+  text-align: left;
+  margin-bottom: 10px;
+  width: 50%;
+}
+.location {
+  text-align: left;
+  font-size: 30px;
+  margin: 10px 0px;
+}
+.head {
+  font-size: 30px;
+  margin: 10px 0px;
+}
+.address {
+  text-align: left;
+}
+.privacy {
+  text-align: left;
 }

@@ -1,4 +1,18 @@
-input,
-label {
+.radio-label {
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  margin-left: 10px;
+}
+.radio-div {
+  height: 10px;
   display: inline;
+  float: right;
+  position: relative;
+  right: 40px;
+}
+.radio-lbl {
+}
+.radio-container {
+  height: 3rem;
+  margin-top: 130px;
 }

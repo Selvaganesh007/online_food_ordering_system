@@ -4,6 +4,11 @@ import { useSelector } from "react-redux";
 import { get_food_details } from "../../MockData/mockData";
 import Header from "./Sections/Header/Header";
 import Footer from "./Sections/Footer/Footer";
+import "./Home.css";
+import { Bakery } from "../../components/Bakery/Bakery.js";
+import { Endpage } from "../../components/Endpage/Endpage";
+import { MainCarosel } from "../../components/carosel/MainCarosel";
+import { Radio } from "../../components/Radio/Radio.js";
 
 const Home = () => {
   const [foodDetails, SetfoodDetails] = useState([]);
@@ -39,13 +44,19 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <div className="home">
       <Header />
-      <div style={{ paddingLeft: "40px" }}>
+      <div className="carosel">
+        <MainCarosel />
+      </div>
+      <Radio />
+      <div className="card-row">
         {foodDetails.map((items) => {
-          return <Cards items={items} count={0} />;
+          return <Cards items={items} />;
         })}
       </div>
+      <Bakery />
+      <Endpage />
       <Footer />
     </div>
   );

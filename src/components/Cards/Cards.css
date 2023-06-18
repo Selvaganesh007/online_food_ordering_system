@@ -1,61 +1,68 @@
-/* Cards.css */
-
-.card-row {
-  display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 .card {
   text-align: center;
-  border: 0.5px solid #ccc;
-  border-radius: 10px;
-  padding: 10px;
-  background-color: #fff;
-  box-shadow: 0 8px 16px rgba(0, 0, 0.2, 0);
+  border-radius: 40px;
+  box-shadow: 0 4px 8px 0px rgba(173, 66, 66, 0.858);
   transition: 0.3s;
   width: 300px;
-  margin: 12px;
-  background-color: rgb(121, 226, 216);
+  padding: 20px 10px;
+  margin: 20px 20px;
+  background-color: rgba(173, 66, 66, 0.858);
 }
-
 .card:hover {
-  box-shadow: 4px 4px 8px 4px rgba(13, 202, 193, 0.722);
+  box-shadow: 4px 4px 4px 4px rgba(137, 53, 53, 0.858);
 }
-
-.card h2 {
-  font-size: 18px;
+.food-reviews {
+  font-size: 10px;
+}
+.card-foodname {
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
-.card h4 {
-  font-size: 14px;
-  margin-bottom: 5px;
-}
-
-.card-buttons {
-  margin-top: 10px;
+.star-price {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-around;
 }
 
-.card-buttons .button-2 {
-  padding: 5px 10px;
-  border-radius: 15px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
+.food-img {
+  margin-top: 10px;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.price {
+  font-size: 18px;
+}
+.card-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.count {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+.cardtext {
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.buttonPlus {
+  background-color: #4387bf;
   cursor: pointer;
-  margin-right: 5px;
+  border: #4387bf;
+  padding: 7px 12px;
+  border-radius: 50%;
 }
-
-.card-buttons .button-2:hover {
-  background-color: #0056b3;
+.buttonMinus {
+  background-color: #4387bf;
+  cursor: pointer;
+  border: #4387bf;
+  padding: 7px 12px;
+  border-radius: 50%;
 }
-
-.card-buttons p {
-  display: inline-block;
-  font-size: 16px;
-  margin: 0 10px;
+.card-food-about {
+  margin-bottom: -8px;
 }
