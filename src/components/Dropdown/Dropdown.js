@@ -15,7 +15,6 @@ export const Dropdown = () => {
           return <option value={item}>{item}</option>;
         })}
       </select>
-      {/* <Cards option={option} /> */}
     </div>
   );
 };
