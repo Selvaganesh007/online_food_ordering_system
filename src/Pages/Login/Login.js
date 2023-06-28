@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "./Login.css";
-import { Input } from "../Input/Input";
+import { Input } from "../../components/Input/Input";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { LoginUserDetails } from "../../features/LoginUser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-export const Login = () => {
+const Login = () => {
   const [loginUser, setLoginUser] = useState({
     username: "",
     password: "",
@@ -112,3 +112,5 @@ export const Login = () => {
     </div>
   );
 };
+
+export default Login;
