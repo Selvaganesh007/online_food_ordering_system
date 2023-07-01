@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./Login.css";
 import { Input } from "../../components/Input/Input";
-import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { LoginUserDetails } from "../../features/LoginUser";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { toastFunction } from "../Register/Helper/Helper";
+import { loginUserAction } from "../../features/HomeSlice";
 
 const Login = () => {
   const [loginUser, setLoginUser] = useState({
@@ -14,9 +15,6 @@ const Login = () => {
     usernameValid: true,
     passwordValid: true,
   });
-
-  const dispatch = useDispatch();
-  const user = useSelector((state) => state.loginUser.userDetails);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -43,28 +41,42 @@ const Login = () => {
     }
   };
 
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const user = useSelector((state) => state.homeSlice.loginUsers);
+
+  const { signInData, loginData } = useSelector((state) => {
+    return {
+      signInData: state.homeSlice.signInUsers,
+      loginData: state.homeSlice.loginUsers,
+    };
+  }, shallowEqual);
+
+  const validation = signInData.map((items) => {
+    return (
+      items.username === loginUser.username &&
+      items.password === loginUser.password
+    );
+  });
+
+  console.log(validation);
   const handleSubmit = (e) => {
     e.preventDefault();
   };
 
   const buttonSubmit = () => {
-    if (loginUser.username === "" || loginUser.password === "") {
-      toast.warn("Fill all the required fields", {
-        position: toast.POSITION.TOP_CENTER,
-        autoClose: 3000,
-      });
-    } else {
-      toast.success("you successfully logged in", {
-        position: toast.POSITION.TOP_CENTER,
-        autoClose: 3000,
-      });
+    if (validation) {
+      toastFunction("success", "you successfully logged in", 3000);
       let Alluser = [];
       if (user !== []) {
         Alluser = [...user];
       }
       Alluser.push(loginUser);
-      console.log(Alluser);
-      console.log(dispatch(LoginUserDetails(Alluser)));
+      dispatch(loginUserAction(Alluser));
+      navigate("/");
+    } else {
+      toastFunction("warn", "type your username and password correctly", 3000);
     }
   };
   return (

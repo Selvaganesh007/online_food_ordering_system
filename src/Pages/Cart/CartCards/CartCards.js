@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "../../../components/Button/Button";
 import "./CartCards.css";
-const CartCards = ({ cartItems, removeCard }) => {
+const CartCards = ({ cartItems, RemoveCard }) => {
   const [cartCount, setCartCount] = useState(cartItems.count);
   const buttonSub = () => {
     setCartCount(cartCount - 1);
@@ -46,7 +46,7 @@ const CartCards = ({ cartItems, removeCard }) => {
         <div>
           <Button
             buttonName="REMOVE"
-            onClick={() => removeCard(cartItems.food_id)}
+            onClick={() => RemoveCard(cartItems.food_id)}
             style={style1}
           />
         </div>
