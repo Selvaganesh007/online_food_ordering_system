@@ -1,0 +1,48 @@
+.delivery {}
+
+.delivery_header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 2rem;
+  border-bottom: 0.2rem solid gray;
+  font-size: 1.4rem;
+}
+
+.deliveryCard {
+  display: grid;
+  grid-template-columns: 25% 10% 10% 30% 23%;
+  grid-auto-flow: column;
+  width: 94%;
+  height: 2rem;
+  background-color: #e9e7e4;
+  margin: 1.4rem;
+  padding: 1rem;
+  border-radius: 0.8rem;
+}
+
+.deliveryCard_Buttons {
+  display: flex;
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deliveryCard_Columns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  gap: 1rem;
+}
+
+.deliveryCard_Icons {
+  cursor: pointer;
+  font-size: 1.4rem;
+  margin-top: 0.3rem;
+}
+
+.deliveryCard_fullDetails {
+
+}

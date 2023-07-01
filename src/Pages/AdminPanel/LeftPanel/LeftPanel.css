@@ -1,0 +1,41 @@
+.leftPanel {
+  width: 20%;
+  height: 100vh;
+  border-right: 0.2rem solid gray;
+  border-top-right-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+  background-color: rgb(52, 52, 52);
+}
+
+.leftPanel h3 {
+  font-weight: 700;
+  font-size: 1.6rem;
+  padding-left: 2rem;
+  color: White;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.sideBar_btn {
+  background-color: rgb(19, 19, 19);
+  color: white;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.clickedBtn {
+  background-color: rgb(52, 136, 209);
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  border-bottom: 0.2rem solid rgb(229, 134, 134);
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.sideBar_btn:hover {
+  background-color: rgb(52, 136, 209);
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  border-bottom: 0.2rem solid rgb(229, 134, 134);
+}

@@ -12,7 +12,7 @@ const Header = () => {
     setShowMenu(!showMenu);
   };
 
-  const isAdmin = false;
+  const isAdmin = true;
 
   const style = {
     padding: "8px 20px",
