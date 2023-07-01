@@ -53,32 +53,28 @@ const Login = () => {
     };
   }, shallowEqual);
 
-  const validation = signInData.map((items) => {
+  const validation = signInData.some((items) => {
+    console.log({ items });
+    console.log({ loginUser });
     return (
       items.username === loginUser.username &&
       items.password === loginUser.password
     );
   });
 
-  console.log(validation);
   const handleSubmit = (e) => {
     e.preventDefault();
   };
 
   const buttonSubmit = () => {
+    console.log(validation);
     if (validation) {
-      toastFunction("success", "you successfully logged in", 3000);
-      let Alluser = [];
-      if (user !== []) {
-        Alluser = [...user];
-      }
-      Alluser.push(loginUser);
-      dispatch(loginUserAction(Alluser));
       navigate("/");
     } else {
       toastFunction("warn", "type your username and password correctly", 3000);
     }
   };
+
   return (
     <div className="container">
       <div className="form">
