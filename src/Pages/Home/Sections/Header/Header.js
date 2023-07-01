@@ -8,16 +8,11 @@ const Header = () => {
   const navigate = useNavigate();
   const [showMenu, setShowMenu] = useState(false);
 
-  const handleCart = () => {
-    navigate("/add-cart");
-  };
-  const handleLogin = () => {
-    navigate("/login");
-  };
-
   const handleMenuToggle = () => {
     setShowMenu(!showMenu);
   };
+
+  const isAdmin = true;
 
   const style = {
     padding: "8px 20px",
@@ -40,7 +35,7 @@ const Header = () => {
         <ul className={`navbar-links ${showMenu ? "show" : ""}`}>
           <div className="links">
             <li className="nav-li">
-              <Link className="linkelements text-link" to="/home">
+              <Link className="linkelements text-link" to="/">
                 Home
               </Link>
             </li>
@@ -57,17 +52,28 @@ const Header = () => {
           </div>
         </ul>
         <div className="nav-buttons">
+          {
+            isAdmin ? (
+              <Button
+                buttonName="Admin"
+                className="elements"
+                onClick={() => navigate("/admin-panel")}
+                style={style}
+              />
+            ) : (
+              <Button
+                buttonName="cart"
+                className="elements"
+                onClick={() => navigate("/add-cart")}
+                style={style}
+              />
+            )
+          }
           <Button
-            buttonName="cart "
-            className="elements"
-            onClick={handleCart}
             style={style}
-          />
-          <Button
-            style={style}
-            buttonName="Login "
+            buttonName="Login"
             className="elements"
-            onClick={handleLogin}
+            onClick={() => navigate("/login")}
           />
         </div>
         <div className="togglebar">

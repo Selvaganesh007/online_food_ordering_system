@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Input } from "../Input/Input";
+import { Input } from "../../components/Input/Input";
 import "./SignUp.css";
 import { useDispatch, useSelector } from "react-redux";
 import { signInUserDetails } from "../../features/SignInUser";
@@ -7,7 +7,8 @@ import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { initialUserData } from "./Helper/Helper";
-export const SignUp = () => {
+
+const SignUp = () => {
   const [userData, setUserData] = useState(initialUserData);
 
   const dispatch = useDispatch();
@@ -163,3 +164,5 @@ export const SignUp = () => {
     </div>
   );
 };
+
+export default SignUp;
