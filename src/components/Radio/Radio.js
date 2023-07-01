@@ -1,8 +1,9 @@
 import React from "react";
-import { food_category } from "../../MockData/mockData.js";
-import { OptionValue } from "../../features/Radioprop.js";
-import { useDispatch } from "react-redux";
 import "./Radio.css";
+import { food_category } from "../../MockData/mockData.js";
+import { useDispatch } from "react-redux";
+import { radioOptionAction } from "../../features/HomeSlice.js";
+
 export const Radio = () => {
   const dispatch = useDispatch();
   return (
@@ -16,7 +17,7 @@ export const Radio = () => {
               value={item}
               name="foodCategory"
               onChange={(e) => {
-                dispatch(OptionValue(e.target.value));
+                dispatch(radioOptionAction(e.target.value));
               }}
             />
             <label className="radio-label ">{item}</label>{" "}

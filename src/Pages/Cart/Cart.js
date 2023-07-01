@@ -4,23 +4,21 @@ import { useSelector } from "react-redux";
 import CardTable from "./CartTable/CartTable";
 import { useDispatch } from "react-redux";
 import "./Cart.css";
-import { removeCart } from "../../features/Addcartprop";
 import Header from "../Home/Sections/Header/Header";
+import { removeCartAction } from "../../features/HomeSlice";
 
 const Cart = () => {
-  const addCartDetails = useSelector((state) => state.addCart.cartItems);
-  const [cards, setCards] = useState(addCartDetails);
+  const addCartDetails = useSelector((state) => state.homeSlice.addCart);
+  console.log(addCartDetails);
+  // const [cards, setCards] = useState(addCartDetails);
   const dispatch = useDispatch();
-  function removeCard(id) {
-    const removableItems = (prevcards) =>
-      prevcards.filter((cards) => {
-        return cards.food_id !== id;
-      });
-    setCards(removableItems);
-    dispatch(removeCart(cards));
-    console.log(cards);
-  }
-  console.log(cards);
+  const RemoveCard = (id) => {
+    const removableItems = addCartDetails.filter((cards) => {
+      return cards.food_id !== id;
+    });
+    // setCards(removableItems);
+    dispatch(removeCartAction(removableItems));
+  };
   return (
     <div className="cart-container">
       <div>
@@ -28,12 +26,12 @@ const Cart = () => {
           <Header />
           <div className="cart">
             <div>
-              {cards.map((items) => {
-                return <CartCards cartItems={items} removeCard={removeCard} />;
+              {addCartDetails.map((items) => {
+                return <CartCards cartItems={items} RemoveCard={RemoveCard} />;
               })}
             </div>
             <div>
-              <CardTable cards={cards} />
+              <CardTable cards={addCartDetails} />
             </div>
           </div>
         </div>
