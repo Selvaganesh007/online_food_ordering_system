@@ -9,10 +9,11 @@ import SignUp from "../Pages/Register/SignUp";
 import About from "../Pages/About/About";
 import Contact from "../Pages/Contact/Contact";
 import AdminPanel from '../Pages/AdminPanel/AdminPanel';
+import history from './History'; 
 
 export const Base = () => {
   return (
-    <Router>
+    <Router history={history}>
       <div className="base">
         <Routes>
           <Route path="/login" element={<Login />} />

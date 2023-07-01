@@ -1,12 +1,13 @@
 import React from "react";
 import "./Input.css";
+
 export const Input = ({
-  labelName,
-  type,
+  labelName = '',
+  type = 'text',
   handleChange,
-  placeholder,
-  value,
-  name,
+  placeholder = '',
+  value = '',
+  name = '',
 }) => {
   return (
     <>
