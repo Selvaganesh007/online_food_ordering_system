@@ -54,9 +54,9 @@ const SignUp = () => {
   const navigate = useNavigate();
   const signinData = useSelector((state) => state.homeSlice.signInUsers);
   console.log(setUserData);
-  const validationUsername = signinData.map((items) => {
-    return items.username !== username;
-  });
+  // const validationUsername = signinData.map((items) => {
+  //   return items.username !== username;
+  // });
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -70,12 +70,10 @@ const SignUp = () => {
       username === "" &&
       password === "" &&
       email === "" &&
-      phoneNumber === "" &&
-      validationUsername
+      phoneNumber === ""
     ) {
       toastFunction("warn", "enter the fields correctly..", 3000);
     } else {
-      toastFunction("success", "you successfully signed in ", 3000);
       let alluser = [];
       if (signinData !== []) {
         alluser = [...signinData];
@@ -83,6 +81,7 @@ const SignUp = () => {
       alluser.push(userData);
       dispatch(signInUserAction(alluser));
       navigate("/login");
+      toastFunction("success", "you successfully signed in ", 3000);
     }
   };
 
