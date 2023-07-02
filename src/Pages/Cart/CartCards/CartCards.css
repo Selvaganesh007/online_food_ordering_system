@@ -13,7 +13,7 @@
 }
 .cart-card-food-about {
   text-align: left;
-  /* padding-right: 10px; */
+  padding-right: 10px;
 }
 img.cart-food-img {
   float: left;
@@ -26,23 +26,22 @@ img.cart-food-img {
   padding: 5px;
 }
 .cart-card-buttons {
+  margin-left: 4rem;
+  height: 40px;
   display: flex;
 }
 
 .cart-buttonPlus {
-  margin-right: 20px;
-  font-size: 20px;
-  padding: 8px 13px;
   margin-left: 20px;
-  border-radius: 50%;
+  padding: 0 10px;
+  border-radius: 50px;
   background-color: rgb(36, 135, 211);
   border: 1px solid rgb(36, 135, 211);
 }
 .cart-buttonMinus {
-  margin-left: 20px;
-  font-size: 20px;
-  padding: 8px 15px;
-  border-radius: 50%;
+  margin-right: 20px;
+  padding: 0 10px;
+  border-radius: 50px;
   background-color: rgb(36, 135, 211);
   border: 1px solid rgb(36, 135, 211);
 }
@@ -53,9 +52,10 @@ img.cart-food-img {
 
 .btn-2 {
   display: flex;
-  margin-left: 15px;
+  width: 100px;
 }
 
 .cart-count {
-  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-left: 1%;
 }

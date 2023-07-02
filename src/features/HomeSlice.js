@@ -35,6 +35,7 @@ export const {
   signInUserAction,
   loginUserAction,
   radioOptionAction,
+  finalCartAction,
 } = HomeSlice.actions;
 
 export default HomeSlice.reducer;

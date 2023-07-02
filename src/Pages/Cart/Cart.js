@@ -9,16 +9,24 @@ import { removeCartAction } from "../../features/HomeSlice";
 
 const Cart = () => {
   const addCartDetails = useSelector((state) => state.homeSlice.addCart);
-  console.log(addCartDetails);
-  // const [cards, setCards] = useState(addCartDetails);
+  const [cards, setCards] = useState(addCartDetails);
   const dispatch = useDispatch();
+
+  const UpdatedCount = (food_id, cartCount) => {
+    const updatedCount = cards.map((items) => {
+      return items.food_id === food_id ? { ...items, count: cartCount } : items;
+    });
+    setCards(updatedCount);
+  };
+
   const RemoveCard = (id) => {
-    const removableItems = addCartDetails.filter((cards) => {
+    const filteredData = cards.filter((cards) => {
       return cards.food_id !== id;
     });
-    // setCards(removableItems);
-    dispatch(removeCartAction(removableItems));
+    setCards(filteredData);
+    dispatch(removeCartAction(filteredData));
   };
+
   return (
     <div className="cart-container">
       <div>
@@ -26,12 +34,18 @@ const Cart = () => {
           <Header />
           <div className="cart">
             <div>
-              {addCartDetails.map((items) => {
-                return <CartCards cartItems={items} RemoveCard={RemoveCard} />;
+              {cards.map((items) => {
+                return (
+                  <CartCards
+                    cartItems={items}
+                    RemoveCard={RemoveCard}
+                    UpdatedCount={UpdatedCount}
+                  />
+                );
               })}
             </div>
             <div>
-              <CardTable cards={addCartDetails} />
+              <CardTable cards={cards} />
             </div>
           </div>
         </div>

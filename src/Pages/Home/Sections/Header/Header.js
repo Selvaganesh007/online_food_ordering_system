@@ -12,7 +12,7 @@ const Header = () => {
     setShowMenu(!showMenu);
   };
 
-  const isAdmin = true;
+  const isAdmin = false;
 
   const style = {
     padding: "8px 20px",
@@ -52,23 +52,21 @@ const Header = () => {
           </div>
         </ul>
         <div className="nav-buttons">
-          {
-            isAdmin ? (
-              <Button
-                buttonName="Admin"
-                className="elements"
-                onClick={() => navigate("/admin-panel")}
-                style={style}
-              />
-            ) : (
-              <Button
-                buttonName="cart"
-                className="elements"
-                onClick={() => navigate("/add-cart")}
-                style={style}
-              />
-            )
-          }
+          {isAdmin ? (
+            <Button
+              buttonName="Admin"
+              className="elements"
+              onClick={() => navigate("/admin-panel")}
+              style={style}
+            />
+          ) : (
+            <Button
+              buttonName="cart"
+              className="elements"
+              onClick={() => navigate("/add-cart")}
+              style={style}
+            />
+          )}
           <Button
             style={style}
             buttonName="Login"

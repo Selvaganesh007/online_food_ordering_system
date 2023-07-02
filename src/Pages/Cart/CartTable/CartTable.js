@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./CartTable.css";
 
 const CardTable = ({ cards }) => {
@@ -6,6 +6,7 @@ const CardTable = ({ cards }) => {
     (total, items) => total + items.count * items.price,
     0
   );
+
   return (
     <div className="carttable-container">
       <h4 className="cart-header">Cart Details</h4>
