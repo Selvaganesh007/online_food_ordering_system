@@ -7,11 +7,21 @@ const Card = ({ items, showCounter, handleAddToCart }) => {
   const [count, setCount] = useState(0);
   const [isClicked, setIsClicked] = useState(false);
   const buttonAdd = () => {
-    setCount(count + 1);
+    if (50 > count) {
+      const plus = count + 1;
+      setCount(plus);
+    }
   };
   const buttonSub = () => {
     if (count > 0) {
-      setCount(count - 1);
+      const minus = count - 1;
+      setCount(minus);
+    }
+  };
+  const handleChange = (e) => {
+    const inputValue = parseInt(e.target.value);
+    if (50 > inputValue) {
+      setCount(inputValue);
     }
   };
   const buttonCart = () => {
@@ -40,7 +50,13 @@ const Card = ({ items, showCounter, handleAddToCart }) => {
             <button onClick={buttonSub} className="buttonMinus cardtext">
               -
             </button>
-            <p className="count cardtext">{count}</p>
+            <input
+              type="text"
+              value={count}
+              className="input-count"
+              onChange={handleChange}
+              inputMode="numeric"
+            />
             <button onClick={buttonAdd} className="buttonPlus cardtext">
               +
             </button>

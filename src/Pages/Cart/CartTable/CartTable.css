@@ -1,3 +1,8 @@
+.carttable-container {
+  height: 400px;
+  overflow-y: scroll;
+}
+
 .carttable {
   width: 500px;
   border-collapse: collapse;
@@ -10,17 +15,21 @@
   text-align: left;
   padding: 10px 15px;
 }
-
 .carttable .cart-head {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #70a5cd;
   color: white;
   border-right: 1px solid white;
 }
-
+.table-head {
+  position: sticky;
+  top: 75px;
+}
 .cart-header {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 40px;
+  position: sticky;
+  top: 14px;
   margin: 15px 0px;
 }
 .cart-total {
@@ -36,5 +45,9 @@
 }
 .carttable-container {
   position: sticky;
-  top: 20px;
+}
+.cart-scroll {
+  overflow: auto;
+}
+.total-row {
 }

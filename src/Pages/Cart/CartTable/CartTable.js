@@ -11,7 +11,7 @@ const CardTable = ({ cards }) => {
     <div className="carttable-container">
       <h4 className="cart-header">Cart Details</h4>
       <table className="carttable">
-        <thead>
+        <thead className="table-head">
           <tr className="cart-row">
             <th className="cart-head">Food name</th>
             <th className="cart-head">Quantity</th>
@@ -23,7 +23,7 @@ const CardTable = ({ cards }) => {
           {cards.map((items) => {
             return (
               <>
-                <tr className="cart-row">
+                <tr className="cart-row cart-scroll">
                   <td className="cart-data">{items.food_name}</td>
                   <td className="cart-data">{items.count}</td>
                   <td className="cart-data">₹{items.price}</td>
@@ -32,7 +32,7 @@ const CardTable = ({ cards }) => {
               </>
             );
           })}
-          <tr className="cart-row">
+          <tr className="cart-row total-row">
             <td colSpan={3} className="cart-total ">
               Total
             </td>

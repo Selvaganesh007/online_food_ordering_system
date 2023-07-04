@@ -69,7 +69,7 @@ const Home = () => {
         })}
       </div>
       <Bakery />
-      <Endpage />
+      {/* <Endpage /> */}
       <Footer />
       <ToastContainer theme="dark" />
     </div>

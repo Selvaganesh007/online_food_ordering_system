@@ -3,10 +3,12 @@ import "./Header.css";
 import { Button } from "../../../../components/Button/Button";
 import { Link, useNavigate } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const navigate = useNavigate();
   const [showMenu, setShowMenu] = useState(false);
+  const userData = useSelector((state) => state.homeSlice.signInUsers);
 
   const handleMenuToggle = () => {
     setShowMenu(!showMenu);
@@ -67,12 +69,19 @@ const Header = () => {
               style={style}
             />
           )}
-          <Button
-            style={style}
-            buttonName="Login"
-            className="elements"
-            onClick={() => navigate("/login")}
-          />
+          {
+            userData === [] ? (
+              <p className="user-name">Hi,user</p>
+            ) : (
+              <p className="user-name">{`Hi,${userData[0].firstName}`} </p>
+            )
+            //  <Button
+            //     style={style}
+            //     buttonName="Login"
+            //     className="elements"
+            //     onClick={() => navigate("/login")}
+            //   />
+          }
         </div>
         <div className="togglebar">
           <FaBars

@@ -4,6 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 import "./MainCarosel.css";
 import { CaroselTemp } from "./CaroselTemp";
 import { carouselItems } from "../../MockData/mockData";
+import { Link } from "react-router-dom";
 export const MainCarosel = () => {
   return (
     <div className="maincarosel">
@@ -23,7 +24,11 @@ export const MainCarosel = () => {
           A new way to <br />
           experience the food​ . . .
         </p>
-        <button className="carosel-btn">Read More...</button>
+        <button className="carosel-btn">
+          <Link to="/about" className="link-btn">
+            Read More...
+          </Link>
+        </button>
       </div>
     </div>
   );

@@ -33,7 +33,7 @@ const Cart = () => {
         <div>
           <Header />
           <div className="cart">
-            <div>
+            <div className="cartCard-container">
               {cards.map((items) => {
                 return (
                   <CartCards
@@ -44,7 +44,7 @@ const Cart = () => {
                 );
               })}
             </div>
-            <div>
+            <div className="cartTable-container">
               <CardTable cards={cards} />
             </div>
           </div>

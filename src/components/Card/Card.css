@@ -8,7 +8,7 @@
   background-color: rgba(49, 68, 99, 0.858);
 }
 .card:hover {
-  box-shadow: 5px 5px 10px 2px rgba(98, 130, 175, 0.858);
+  box-shadow: 5px 5px 10px 2px rgba(34, 91, 104, 0.858);
 }
 .food-reviews {
   font-size: 10px;
@@ -88,4 +88,10 @@
   font-size: 12px;
   box-shadow: 0 8px 16px 2px rgba(0, 0, 0, 0.2),
     0 6px 21px 5px rgba(0, 0, 0, 0.19);
+}
+.input-count {
+  width: 30px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
 }

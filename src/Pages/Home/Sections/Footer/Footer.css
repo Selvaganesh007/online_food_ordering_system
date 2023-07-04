@@ -1,7 +1,15 @@
 .footer {
   background-color: rgb(241, 235, 233);
   display: flex;
+  height: 70vh;
+  align-items: flex-end;
   justify-content: space-around;
+  background: rgb(250, 254, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(250, 254, 255, 1) 2%,
+    rgba(100, 181, 223, 1) 100%
+  );
 }
 .icon {
   padding-left: 10px;
