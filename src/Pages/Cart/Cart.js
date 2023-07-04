@@ -6,11 +6,13 @@ import { useDispatch } from "react-redux";
 import "./Cart.css";
 import Header from "../Home/Sections/Header/Header";
 import { removeCartAction } from "../../features/HomeSlice";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const addCartDetails = useSelector((state) => state.homeSlice.addCart);
   const [cards, setCards] = useState(addCartDetails);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const UpdatedCount = (food_id, cartCount) => {
     const updatedCount = cards.map((items) => {
@@ -46,6 +48,11 @@ const Cart = () => {
             </div>
             <div className="cartTable-container">
               <CardTable cards={cards} />
+              <div className="buynow">
+                <button onClick={() => navigate("/Get-Address")}>
+                  Buy now
+                </button>
+              </div>
             </div>
           </div>
         </div>

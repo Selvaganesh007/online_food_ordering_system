@@ -80,8 +80,10 @@ const SignUp = () => {
       }
       alluser.push(userData);
       dispatch(signInUserAction(alluser));
-      navigate("/login");
       toastFunction("success", "you successfully signed in ", 3000);
+      setTimeout(() => {
+        navigate("/login");
+      }, 3000);
     }
   };
 
@@ -91,7 +93,7 @@ const SignUp = () => {
         <h1>Create an account </h1>
         <form onSubmit={handleSubmit}>
           <Input
-            labelName="username"
+            labelName="Username"
             type="text"
             name="username"
             value={username}
@@ -131,7 +133,7 @@ const SignUp = () => {
           )}
 
           <Input
-            labelName="mobile"
+            labelName="Mobile"
             type="number"
             name="phoneNumber"
             value={phoneNumber}
@@ -140,7 +142,7 @@ const SignUp = () => {
           />
           {!phoneNumberValid && <p>Please enter a valid phone number</p>}
           <Input
-            labelName="email"
+            labelName="Email"
             type="email"
             name="email"
             value={email}
@@ -149,7 +151,7 @@ const SignUp = () => {
           />
           {!emailValid && <p>Please enter a valid email</p>}
           <Input
-            labelName="address"
+            labelName="Address"
             type="address"
             name="address"
             value={address}
@@ -157,7 +159,7 @@ const SignUp = () => {
             handleChange={handleChange}
           />
           <Input
-            labelName="landmark"
+            labelName="Landmark"
             type="landmark"
             name="landmark"
             value={landmark}

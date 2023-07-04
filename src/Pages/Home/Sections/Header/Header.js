@@ -73,7 +73,7 @@ const Header = () => {
             userData === [] ? (
               <p className="user-name">Hi,user</p>
             ) : (
-              <p className="user-name">{`Hi,${userData[0].firstName}`} </p>
+              <p className="user-name">{`Hi,${userData.firstName}`} </p>
             )
             //  <Button
             //     style={style}

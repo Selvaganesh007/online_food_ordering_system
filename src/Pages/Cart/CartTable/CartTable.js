@@ -8,38 +8,42 @@ const CardTable = ({ cards }) => {
   );
 
   return (
-    <div className="carttable-container">
+    <div className="carttable-container table-container">
       <h4 className="cart-header">Cart Details</h4>
-      <table className="carttable">
-        <thead className="table-head">
-          <tr className="cart-row">
-            <th className="cart-head">Food name</th>
-            <th className="cart-head">Quantity</th>
-            <th className="cart-head">amount (per food)</th>
-            <th className="cart-head">amount</th>
-          </tr>
-        </thead>
-        <tbody>
-          {cards.map((items) => {
-            return (
-              <>
-                <tr className="cart-row cart-scroll">
-                  <td className="cart-data">{items.food_name}</td>
-                  <td className="cart-data">{items.count}</td>
-                  <td className="cart-data">₹{items.price}</td>
-                  <td className="cart-data">₹{items.count * items.price}</td>
-                </tr>
-              </>
-            );
-          })}
-          <tr className="cart-row total-row">
-            <td colSpan={3} className="cart-total ">
-              Total
-            </td>
-            <td className="cart-total">₹{total}</td>
-          </tr>
-        </tbody>
-      </table>
+      <div className="table-wrapper">
+        <table className="carttable">
+          <thead className="table-head">
+            <tr className="cart-row">
+              <th className="cart-head">Food name</th>
+              <th className="cart-head">Quantity</th>
+              <th className="cart-head">amount (per food)</th>
+              <th className="cart-head">amount</th>
+            </tr>
+          </thead>
+          <tbody className="cart-body">
+            {cards.map((items) => {
+              return (
+                <>
+                  <tr className="cart-row cart-scroll">
+                    <td className="cart-data">{items.food_name}</td>
+                    <td className="cart-data">{items.count}</td>
+                    <td className="cart-data">₹{items.price}</td>
+                    <td className="cart-data">₹{items.count * items.price}</td>
+                  </tr>
+                </>
+              );
+            })}
+            <tfoot className="table-footer">
+              <tr className="cart-row total-row">
+                <td colSpan={3} className="cart-total ">
+                  Total
+                </td>
+                <td className="cart-total">₹{total}</td>
+              </tr>
+            </tfoot>
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

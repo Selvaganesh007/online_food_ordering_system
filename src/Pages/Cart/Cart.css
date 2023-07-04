@@ -31,3 +31,17 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+.buynow {
+  margin-top: 50px;
+}
+.buynow button {
+  font-size: 20px;
+  padding: 10px 0px;
+  height: 40px;
+  width: 500px;
+  color: aliceblue;
+  background-color: #1e6d9b;
+  border: #1e6d9b;
+  border-radius: 10px;
+  cursor: pointer;
+}
