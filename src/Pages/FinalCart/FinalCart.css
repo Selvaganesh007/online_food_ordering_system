@@ -1,0 +1,15 @@
+.finalcart-amount {
+  font-size: 30px;
+}
+.finalcart-table {
+  margin-top: 100px;
+}
+.table-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.btns {
+  display: flex;
+  justify-content: space-evenly;
+}

@@ -16,8 +16,6 @@ const SignUp = () => {
     password,
     phoneNumber,
     email,
-    address,
-    landmark,
     firstName,
     usernameValid,
     phoneNumberValid,
@@ -110,13 +108,22 @@ const SignUp = () => {
             handleChange={handleChange}
           />
           <Input
-            labelName="lastName"
+            labelName="last name"
             type="text"
             name="lastName"
             value={lastName}
             placeholder="enter lastName"
             handleChange={handleChange}
           />
+          <Input
+            labelName="Email"
+            type="email"
+            name="email"
+            value={email}
+            placeholder="enter email"
+            handleChange={handleChange}
+          />
+          {!emailValid && <p>Please enter a valid email</p>}
           <Input
             labelName="password"
             type="password"
@@ -141,31 +148,7 @@ const SignUp = () => {
             handleChange={handleChange}
           />
           {!phoneNumberValid && <p>Please enter a valid phone number</p>}
-          <Input
-            labelName="Email"
-            type="email"
-            name="email"
-            value={email}
-            placeholder="enter email"
-            handleChange={handleChange}
-          />
-          {!emailValid && <p>Please enter a valid email</p>}
-          <Input
-            labelName="Address"
-            type="address"
-            name="address"
-            value={address}
-            placeholder="enter address"
-            handleChange={handleChange}
-          />
-          <Input
-            labelName="Landmark"
-            type="landmark"
-            name="landmark"
-            value={landmark}
-            placeholder="enter landmark"
-            handleChange={handleChange}
-          />
+
           <br />
           <p>
             if you already have an account

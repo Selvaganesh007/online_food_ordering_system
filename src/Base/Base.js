@@ -11,6 +11,7 @@ import Contact from "../Pages/Contact/Contact";
 import AdminPanel from "../Pages/AdminPanel/AdminPanel";
 import GetAddress from "../Pages/GetAddress/GetAddress";
 import history from "./History";
+import FinalCart from "../Pages/FinalCart/FinalCart";
 
 export const Base = () => {
   return (
@@ -25,6 +26,7 @@ export const Base = () => {
           <Route path="/about" element={<About />} />
           <Route path="/admin-panel" element={<AdminPanel />} />
           <Route path="/Get-Address" element={<GetAddress />} />
+          <Route path="/final-cart" element={<FinalCart />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </div>

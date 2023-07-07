@@ -1,0 +1,9 @@
+.End-btn {
+  background-color: rgb(62, 157, 62);
+  padding: 10px 20px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: aliceblue;
+}

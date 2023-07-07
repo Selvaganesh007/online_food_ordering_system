@@ -1,9 +1,22 @@
 import React, { useState } from "react";
 import "./Card.css";
 import "react-toastify/dist/ReactToastify.css";
+import { PRODUCT_KEYS } from "../../Pages/Register/Helper/Helper";
 import { toastFunction } from "../../Pages/Register/Helper/Helper";
 
 const Card = ({ items, showCounter, handleAddToCart }) => {
+  const {
+    food_id,
+    food_name,
+    imageLink,
+    about,
+    food_category,
+    reviews,
+    star,
+    description,
+    timing,
+    price,
+  } = items;
   const [count, setCount] = useState(0);
   const [isClicked, setIsClicked] = useState(false);
   const buttonAdd = () => {
