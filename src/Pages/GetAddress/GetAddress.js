@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "./GetAddress.css";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { initialUserAddress } from "../Register/Helper/Helper";
 
 const GetAddress = () => {
+  const [userAddress, setUserAddress] = useState(initialUserAddress);
+  const HandleChange = (e) => {
+    const { name, value } = e.target;
+    setUserAddress((preUserData) => ({
+      ...preUserData,
+      [name]: value,
+    }));
+    console.log(`${name}:${value}`);
+  };
+  console.log(userAddress);
   const navigate = useNavigate();
   const signInData = useSelector((state) => state.homeSlice.signInUsers);
   console.log(signInData);
-  const email = signInData !== [] ? signInData[0].email : "pradeep@gmail.com";
-  const firstName = signInData !== [] ? signInData[0].firstName : "aefvav";
-  const lastName = signInData !== [] ? signInData[0].lastName : "vqearqv";
   return (
     <div className="address-container">
       <div className="address-card">
@@ -23,46 +31,69 @@ const GetAddress = () => {
           <input
             className="input-email"
             type="email"
+            name="email"
             placeholder="Email"
-            defaultValue={email}
+            onChange={HandleChange}
+            // defaultValue={email}
           />
           <br />
           <p>If you want to change your Details,you can change below</p>
         </div>
         <div className="address-body">
           <p className="body-header">Shipping address</p>
-          <input className="input-address" placeholder=" Country" type="text" />
+          <input
+            className="input-address"
+            placeholder=" Country"
+            type="text"
+            onChange={HandleChange}
+          />
           <br />
           <input
             className="input-address-firstname"
             placeholder="First Name"
             type="text"
-            defaultValue={firstName}
+            name=" firstName"
+            onChange={HandleChange}
+            // defaultValue={firstName}
           />
           <input
             className="input-address-lastname"
+            name="lastName"
+            onChange={HandleChange}
             placeholder="Last Name"
             type="text"
-            defaultValue={lastName}
+            // defaultValue={lastName}
           />
           <br />
           <input
             className="input-address"
+            name="address"
+            onChange={HandleChange}
             placeholder="Street, Area, city "
             type="text"
           />
-          <input className="input-state" placeholder="State" type="text" />
           <input
+            className="input-state"
+            onChange={HandleChange}
+            placeholder="State"
+            type="text"
+            name="state"
+          />
+          <input
+            name="pincode"
             className="input-pincode"
             placeholder="Pin code"
+            onChange={HandleChange}
             type="number"
           />
           <br />
           <input
             className="input-address"
             placeholder="Phone numer"
+            onChange={HandleChange}
             type="number"
-            defaultValue={signInData[0].phoneNumber}
+            name="phoneNumber"
+            // defaultValue={signInData[0].phoneNumber}
           />
           <br />
           <div className="save-details">

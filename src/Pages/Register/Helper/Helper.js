@@ -28,6 +28,17 @@ export const initialUserData = {
   passwordValid: true,
 };
 
+export const initialUserAddress = {
+  firstName: "",
+  lastName: "",
+  phoneNumber: "",
+  email: "",
+  country: "",
+  state: "",
+  pincode: "",
+  address: "",
+};
+
 export function toastFunction(type, message, time = 1000) {
   return toast[type](message, {
     position: toast.POSITION.BOTTOM_CENTER,
