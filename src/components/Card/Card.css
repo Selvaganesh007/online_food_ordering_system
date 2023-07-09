@@ -1,15 +1,14 @@
 .card {
   text-align: center;
   border-radius: 40px;
-  box-shadow: 0 4px 8px 0px rgba(173, 66, 66, 0.858);
-  transition: 0.3s;
+  transition: 0.5s;
   width: 300px;
   padding: 20px 10px;
   margin: 20px 20px;
-  background-color: rgba(173, 66, 66, 0.858);
+  background-color: rgba(49, 68, 99, 0.858);
 }
 .card:hover {
-  box-shadow: 4px 4px 4px 4px rgba(137, 53, 53, 0.858);
+  box-shadow: 5px 5px 10px 2px rgba(34, 91, 104, 0.858);
 }
 .food-reviews {
   font-size: 10px;
@@ -38,7 +37,7 @@
 .card-buttons {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 .count {
   font-size: 15px;
@@ -65,4 +64,34 @@
 }
 .card-food-about {
   margin-bottom: -8px;
+}
+.notClicked {
+  padding: 8px 11px;
+  color: white;
+  font-weight: bold;
+  background-color: #4387bf;
+  border-radius: 10px;
+  border: #4387bf;
+  cursor: pointer;
+  font-size: 12px;
+  box-shadow: 0 8px 16px 2px rgba(0, 0, 0, 0.2),
+    0 6px 21px 5px rgba(0, 0, 0, 0.19);
+}
+.clicked {
+  padding: 8px 11px;
+  color: rgb(42, 32, 32);
+  font-weight: bold;
+  background-color: #38cc96;
+  border-radius: 10px;
+  border: #4387bf;
+  cursor: pointer;
+  font-size: 12px;
+  box-shadow: 0 8px 16px 2px rgba(0, 0, 0, 0.2),
+    0 6px 21px 5px rgba(0, 0, 0, 0.19);
+}
+.input-count {
+  width: 30px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
 }

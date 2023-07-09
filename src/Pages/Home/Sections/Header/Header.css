@@ -63,7 +63,9 @@ div > .elements {
 .navbar-toggler {
   display: none;
 }
-
+.user-name {
+  margin-left: 20px;
+}
 @media (max-width: 768px) {
   .navbar-links {
     display: none;

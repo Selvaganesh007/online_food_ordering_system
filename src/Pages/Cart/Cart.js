@@ -6,32 +6,53 @@ import { useDispatch } from "react-redux";
 import "./Cart.css";
 import Header from "../Home/Sections/Header/Header";
 import { removeCartAction } from "../../features/HomeSlice";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const addCartDetails = useSelector((state) => state.homeSlice.addCart);
-  console.log(addCartDetails);
-  // const [cards, setCards] = useState(addCartDetails);
+  const [cards, setCards] = useState(addCartDetails);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const UpdatedCount = (food_id, cartCount) => {
+    const updatedCount = cards.map((items) => {
+      return items.food_id === food_id ? { ...items, count: cartCount } : items;
+    });
+    setCards(updatedCount);
+  };
+
   const RemoveCard = (id) => {
-    const removableItems = addCartDetails.filter((cards) => {
+    const filteredData = cards.filter((cards) => {
       return cards.food_id !== id;
     });
-    // setCards(removableItems);
-    dispatch(removeCartAction(removableItems));
+    setCards(filteredData);
+    dispatch(removeCartAction(filteredData));
   };
+
   return (
     <div className="cart-container">
       <div>
         <div>
           <Header />
           <div className="cart">
-            <div>
-              {addCartDetails.map((items) => {
-                return <CartCards cartItems={items} RemoveCard={RemoveCard} />;
+            <div className="cartCard-container">
+              {cards.map((items) => {
+                return (
+                  <CartCards
+                    cartItems={items}
+                    RemoveCard={RemoveCard}
+                    UpdatedCount={UpdatedCount}
+                  />
+                );
               })}
             </div>
-            <div>
-              <CardTable cards={addCartDetails} />
+            <div className="cartTable-container">
+              <CardTable cards={cards} />
+              <div className="buynow">
+                <button onClick={() => navigate("/Get-Address")}>
+                  Buy now
+                </button>
+              </div>
             </div>
           </div>
         </div>

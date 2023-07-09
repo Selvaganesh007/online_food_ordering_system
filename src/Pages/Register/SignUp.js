@@ -16,8 +16,6 @@ const SignUp = () => {
     password,
     phoneNumber,
     email,
-    address,
-    landmark,
     firstName,
     usernameValid,
     phoneNumberValid,
@@ -80,8 +78,10 @@ const SignUp = () => {
       }
       alluser.push(userData);
       dispatch(signInUserAction(alluser));
-      navigate("/login");
       toastFunction("success", "you successfully signed in ", 3000);
+      setTimeout(() => {
+        navigate("/login");
+      }, 3000);
     }
   };
 
@@ -91,7 +91,7 @@ const SignUp = () => {
         <h1>Create an account </h1>
         <form onSubmit={handleSubmit}>
           <Input
-            labelName="username"
+            labelName="Username"
             type="text"
             name="username"
             value={username}
@@ -108,13 +108,22 @@ const SignUp = () => {
             handleChange={handleChange}
           />
           <Input
-            labelName="lastName"
+            labelName="last name"
             type="text"
             name="lastName"
             value={lastName}
             placeholder="enter lastName"
             handleChange={handleChange}
           />
+          <Input
+            labelName="Email"
+            type="email"
+            name="email"
+            value={email}
+            placeholder="enter email"
+            handleChange={handleChange}
+          />
+          {!emailValid && <p>Please enter a valid email</p>}
           <Input
             labelName="password"
             type="password"
@@ -131,7 +140,7 @@ const SignUp = () => {
           )}
 
           <Input
-            labelName="mobile"
+            labelName="Mobile"
             type="number"
             name="phoneNumber"
             value={phoneNumber}
@@ -139,31 +148,7 @@ const SignUp = () => {
             handleChange={handleChange}
           />
           {!phoneNumberValid && <p>Please enter a valid phone number</p>}
-          <Input
-            labelName="email"
-            type="email"
-            name="email"
-            value={email}
-            placeholder="enter email"
-            handleChange={handleChange}
-          />
-          {!emailValid && <p>Please enter a valid email</p>}
-          <Input
-            labelName="address"
-            type="address"
-            name="address"
-            value={address}
-            placeholder="enter address"
-            handleChange={handleChange}
-          />
-          <Input
-            labelName="landmark"
-            type="landmark"
-            name="landmark"
-            value={landmark}
-            placeholder="enter landmark"
-            handleChange={handleChange}
-          />
+
           <br />
           <p>
             if you already have an account
