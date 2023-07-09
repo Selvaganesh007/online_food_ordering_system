@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Card.css";
-import { Button } from "../Button/Button.js";
 import "react-toastify/dist/ReactToastify.css";
+import { Button } from "antd";
 
 const Card = ({ items, showCounter, handleAddToCart, buttonName }) => {
   const [count, setCount] = useState(0);
@@ -15,18 +15,6 @@ const Card = ({ items, showCounter, handleAddToCart, buttonName }) => {
     }
   };
 
-  const style = {
-    padding: "8px 11px",
-    color: "white",
-    fontWeight: "bold",
-    backgroundColor: "#4387bf",
-    borderRadius: "10px",
-    border: "#4387bf",
-    cursor: "pointer",
-    fontSize: "12px",
-    boxShadow:
-      " 0 8px 16px 2px rgba(0,0,0,0.2), 0 6px 21px 5px rgba(0,0,0,0.19)",
-  };
   return (
     <div className="card">
       <h2 className="card-foodname cardtext">{items.food_name}</h2>
@@ -52,10 +40,10 @@ const Card = ({ items, showCounter, handleAddToCart, buttonName }) => {
           ) : ''
         }
         <Button
-          buttonName={buttonName}
           onClick={() => handleAddToCart(items)}
-          style={style}
-        />
+          type='primary' 
+          // disabled
+        >{buttonName}</Button>
       </div>
     </div>
   );

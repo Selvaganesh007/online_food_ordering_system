@@ -12,6 +12,7 @@ import AdminPanel from '../Pages/AdminPanel/AdminPanel';
 import history from './History'; 
 
 export const Base = () => {
+  const isAdmin = true;
   return (
     <Router history={history}>
       <div className="base">
@@ -22,7 +23,9 @@ export const Base = () => {
           <Route path="/sign-in" element={<SignUp />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
-          <Route path="/admin-panel" element={<AdminPanel />} />
+          {
+            isAdmin && <Route path="/admin-panel?tab=delivery" element={<AdminPanel />} />
+          }
           <Route path="*" element={<Error />} />
         </Routes>
       </div>

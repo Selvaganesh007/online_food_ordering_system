@@ -7,9 +7,9 @@ const LeftPanel = ({ handleTabClick, tab_name }) => {
     <div className='leftPanel'>
       <h3>Anand Sweets</h3>
       {
-        tabList.map(({ tabName, tabIcon }) => {
+        tabList.map(({ tabName, tabIcon, tabId }) => {
           return (
-            <div className={tab_name === tabName ? 'clickedBtn' : 'sideBar_btn'} onClick={() => handleTabClick(tabName)} role='button' tabIndex={0}>{tabIcon} {tabName}</div>
+            <div className={tab_name === tabId ? 'clickedBtn' : 'sideBar_btn'} onClick={() => handleTabClick(tabName)} role='button' tabIndex={0}>{tabIcon} {tabName}</div>
           )
         })
       }

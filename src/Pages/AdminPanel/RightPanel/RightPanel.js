@@ -8,10 +8,10 @@ import Delivery from '../Tabs/Delivery/Delivery';
 const RightPanel = ({ tabName }) => {
   const renderComponent = () => {
     switch (tabName) {
-      case 'Delivery': return <Delivery />
-      case 'Product': return <Products />
-      case 'Dash Board': return <DashBoard />
-      case 'Settings': return <Settings />
+      case 'delivery': return <Delivery />
+      case 'product': return <Products />
+      case 'dash_board': return <DashBoard />
+      case 'settings': return <Settings />
       default:
     }
   }
@@ -23,4 +23,4 @@ const RightPanel = ({ tabName }) => {
   )
 }
 
-export default RightPanel
+export default RightPanel;

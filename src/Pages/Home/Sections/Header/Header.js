@@ -57,7 +57,7 @@ const Header = () => {
               <Button
                 buttonName="Admin"
                 className="elements"
-                onClick={() => navigate("/admin-panel")}
+                onClick={() => navigate("/admin-panel?tab=delivery")}
                 style={style}
               />
             ) : (

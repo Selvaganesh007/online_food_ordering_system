@@ -60,7 +60,7 @@ const Home = () => {
         {foodDetails.map((items) => {
           return (
             <Card
-              showCounter={false}
+              showCounter
               items={items}
               handleAddToCart={handleAddToCart}
               buttonName={buttonName}

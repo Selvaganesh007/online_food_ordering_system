@@ -24,7 +24,6 @@ const Products = () => {
   useEffect(() => {
     const productLists = [...JSON.parse(localStorage.getItem('productLists'))];
     setAllProductsList(productLists || []);
-    console.log(productLists);
   }, []);
 
   const handleDrawerDetailChange = (fieldName, value) => {
