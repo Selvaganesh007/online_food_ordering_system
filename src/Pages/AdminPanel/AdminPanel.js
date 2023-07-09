@@ -15,7 +15,7 @@ const AdminPanel = () => {
   // }, [tabName]);
 
   const handleTabClick = (tabName) => {
-    switch (tabName) {
+    switch (tabName) { 
       case 'Delivery':
         history.push('/admin-panel?tab=delivery');
         setTabName('delivery');
