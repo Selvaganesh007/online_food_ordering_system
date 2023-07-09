@@ -2,7 +2,8 @@
 export default class Utility {
   static getUrlParams(paramName) {
     const urlParams = new URLSearchParams(window.location.search);
-    const myParam = urlParams.get({ paramName });
+    const myParam = urlParams.get(paramName);
+    console.log({ myParam });
     return myParam;
   };
   static transformToWord(word = '') {

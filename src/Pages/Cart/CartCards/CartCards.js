@@ -1,13 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "../../../components/Button/Button";
 import "./CartCards.css";
-const CartCards = ({ cartItems, removeCard }) => {
+
+const CartCards = ({ cartItems, RemoveCard, UpdatedCount }) => {
   const [cartCount, setCartCount] = useState(cartItems.count);
+
   const buttonSub = () => {
-    setCartCount(cartCount - 1);
+    const updatedMinus = cartCount - 1;
+    setCartCount(updatedMinus);
+    UpdatedCount(cartItems.food_id, updatedMinus);
   };
   const buttonAdd = () => {
-    setCartCount(cartCount + 1);
+    const updatedplus = cartCount + 1;
+    setCartCount(updatedplus);
+    UpdatedCount(cartItems.food_id, updatedplus);
   };
   const style1 = {
     padding: "12px 25px",
@@ -35,18 +41,26 @@ const CartCards = ({ cartItems, removeCard }) => {
       </div>
       <div className="cart-card-buttons ">
         <div className="btn-2">
-          <button onClick={buttonSub} className="cart-buttonMinus cardtext">
+          <button
+            onClick={buttonSub}
+            className="cart-buttonMinus cardtext"
+            disabled={cartCount < 2}
+          >
             -
           </button>
           <p className="cart-count cardtext">{cartCount}</p>
-          <button onClick={buttonAdd} className="cart-buttonPlus cardtext">
+          <button
+            onClick={buttonAdd}
+            className="cart-buttonPlus cardtext"
+            disabled={cartCount >= 50}
+          >
             +
           </button>
         </div>
         <div>
           <Button
             buttonName="REMOVE"
-            onClick={() => removeCard(cartItems.food_id)}
+            onClick={() => RemoveCard(cartItems.food_id)}
             style={style1}
           />
         </div>

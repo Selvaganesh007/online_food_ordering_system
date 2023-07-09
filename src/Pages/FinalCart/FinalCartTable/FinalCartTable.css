@@ -1,22 +1,22 @@
-.table-container {
-  width: 500px;
+.finaltable-container {
+  width: 700px;
   height: 450px;
   overflow: hidden;
 }
 
-.table-wrapper {
+.finaltable-wrapper {
   overflow-y: scroll;
   height: 100%;
 }
-.cart-header {
+.finalcart-header {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 40px;
   position: sticky;
   top: 14px;
   margin: 15px 0px;
 }
-.carttable {
-  width: 500px;
+.finalcarttable {
+  width: 600px;
   border-collapse: collapse;
   margin-right: 3rem;
   table-layout: auto;
@@ -28,48 +28,49 @@ thead {
   background-color: inherit;
 }
 
-.table-footer {
+.finaltable-footer {
   position: sticky;
   bottom: 0;
   background-color: inherit;
 }
 
-tbody {
+.finalcart-body {
   display: block;
   height: 100%;
   overflow-y: scroll;
 }
 
-tr {
+.finalcart-row {
+  font-size: 20px;
   display: table;
   width: 100%;
   table-layout: fixed;
 }
-.cart-data {
+.finalcart-data {
   border-bottom: 1px solid black;
 }
-.cart-head,
-.cart-data {
+.finalcart-head,
+.finalcart-data {
   padding: 8px;
   text-align: left;
 }
-.cart-body {
+.finalcart-body {
   display: block;
   overflow-x: hidden;
   height: calc(100% - 70px); /* Subtract header and footer height */
   overflow-y: auto;
 }
-.total-row {
+.finaltotal-row {
   font-weight: bold;
 }
 
-.cart-head {
+.finalcart-head {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #70a5cd;
   color: white;
   border-right: 1px solid white;
 }
-.table-wrapper {
+.finaltable-wrapper {
   overflow-x: hidden;
   overflow-y: auto;
   height: calc(100% - 90px); /* Subtract header and footer height */

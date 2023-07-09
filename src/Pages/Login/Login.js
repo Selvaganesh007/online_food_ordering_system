@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "./Login.css";
 import { Input } from "../../components/Input/Input";
-import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { LoginUserDetails } from "../../features/LoginUser";
+import { Link, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { toastFunction } from "../Register/Helper/Helper";
 
 const Login = () => {
   const [loginUser, setLoginUser] = useState({
@@ -14,9 +14,6 @@ const Login = () => {
     usernameValid: true,
     passwordValid: true,
   });
-
-  const dispatch = useDispatch();
-  const user = useSelector((state) => state.loginUser.userDetails);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -43,68 +40,68 @@ const Login = () => {
     }
   };
 
+  const navigate = useNavigate();
+
+  const user = useSelector((state) => state.homeSlice.loginUsers);
+
+  const signInData = useSelector((state) => state.homeSlice.signInUsers);
+
+  const validation = signInData.some((items) => {
+    console.log({ items });
+    console.log({ loginUser });
+    return (
+      items.username === loginUser.username &&
+      items.password === loginUser.password
+    );
+  });
+
   const handleSubmit = (e) => {
     e.preventDefault();
   };
 
   const buttonSubmit = () => {
-    if (loginUser.username === "" || loginUser.password === "") {
-      toast.warn("Fill all the required fields", {
-        position: toast.POSITION.TOP_CENTER,
-        autoClose: 3000,
-      });
+    console.log(validation);
+    if (validation) {
+      navigate("/");
     } else {
-      toast.success("you successfully logged in", {
-        position: toast.POSITION.TOP_CENTER,
-        autoClose: 3000,
-      });
-      let Alluser = [];
-      if (user !== []) {
-        Alluser = [...user];
-      }
-      Alluser.push(loginUser);
-      console.log(Alluser);
-      console.log(dispatch(LoginUserDetails(Alluser)));
+      toastFunction("warn", "type your username and password correctly", 3000);
     }
   };
+
   return (
     <div className="container">
       <div className="form">
-        <h1>Login </h1>
-        <form onSubmit={handleSubmit}>
+        <h1 className="login-header">Login </h1>
+        <form onSubmit={handleSubmit} className="login-form">
           <ToastContainer />
           <Input
-            labelName="username"
+            labelName="Username"
             type="text"
             name="username"
             value={loginUser.username}
             placeholder="enter username"
             handleChange={handleChange}
+            className="login-input"
           />
-          {!loginUser.usernameValid && <p>Please enter a valid name</p>}
           <Input
-            labelName="password"
+            labelName="Password"
             type="password"
             name="password"
             value={loginUser.password}
             placeholder="enter password"
             handleChange={handleChange}
+            className="login-input"
           />
-          {!loginUser.passwordValid && (
-            <p>
-              Please enter a valid password (at least 8 characters, with one
-              uppercase letter, one lowercase letter, and one number)
-            </p>
-          )}
-          <p>
+
+          <p className="login-info">
             if you dont have an account
             <span>
               <Link to="/sign-in">
-                <strong>sign up</strong>
+                <strong>&nbsp;&nbsp;sign up</strong>
               </Link>
             </span>
           </p>
-          <button className="btn" onClick={buttonSubmit}>
+          <button className="login-btn" onClick={buttonSubmit}>
             Login
           </button>
         </form>

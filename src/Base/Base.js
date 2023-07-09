@@ -8,10 +8,13 @@ import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/Register/SignUp";
 import About from "../Pages/About/About";
 import Contact from "../Pages/Contact/Contact";
-import AdminPanel from '../Pages/AdminPanel/AdminPanel';
-import history from './History'; 
+import AdminPanel from "../Pages/AdminPanel/AdminPanel";
+import GetAddress from "../Pages/GetAddress/GetAddress";
+import history from "./History";
+import FinalCart from "../Pages/FinalCart/FinalCart";
 
 export const Base = () => {
+  const isAdmin = true;
   return (
     <Router history={history}>
       <div className="base">
@@ -22,7 +25,12 @@ export const Base = () => {
           <Route path="/sign-in" element={<SignUp />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
+          {
+            isAdmin && <Route path="/admin-panel?tab=delivery" element={<AdminPanel />} />
+          }
           <Route path="/admin-panel" element={<AdminPanel />} />
+          <Route path="/Get-Address" element={<GetAddress />} />
+          <Route path="/final-cart" element={<FinalCart />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </div>

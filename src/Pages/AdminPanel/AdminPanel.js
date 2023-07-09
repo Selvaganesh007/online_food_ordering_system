@@ -1,29 +1,36 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './AdminPanel.css';
 import RightPanel from './RightPanel/RightPanel';
 import LeftPanel from './LeftPanel/LeftPanel';
 import history from '../../Base/History';
+import Utility from '../../Helpers/helper';
 
 const AdminPanel = () => {
-  const [tabName, setTabName] = useState('Delivery');
+  const [tabName, setTabName] = useState('delivery');
+
+  // useEffect(() => {
+  //   const a = Utility.getUrlParams('tab');
+  //   console.log(a);
+  //   setTabName(Utility.getUrlParams('tab'));
+  // }, [tabName]);
 
   const handleTabClick = (tabName) => {
-    switch (tabName) {
+    switch (tabName) { 
       case 'Delivery':
         history.push('/admin-panel?tab=delivery');
-        setTabName('Delivery');
+        setTabName('delivery');
       break;
       case 'Product': 
         history.push('/admin-panel?tab=product');
-        setTabName('Product');
+        setTabName('product');
       break;
       case 'Dash board': 
-        history.push("/admin-panel?dash_board");
-        setTabName('Dash Board');
+        history.push("/admin-panel?tab=dash_board");
+        setTabName('dash_board');
       break;
       case 'Settings': 
-        history.push("/admin-panel?settings");
-        setTabName('Settings');
+        history.push("/admin-panel?tab=settings");
+        setTabName('settings');
       break;
       default:
     }
