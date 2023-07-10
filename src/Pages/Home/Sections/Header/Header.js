@@ -54,21 +54,6 @@ const Header = () => {
           </div>
         </ul>
         <div className="nav-buttons">
-          {isAdmin ? (
-            <Button
-            buttonName="Admin"
-            className="elements"
-            onClick={() => navigate("/admin-panel?tab=delivery")}
-            style={style}
-          />
-          ) : (
-            <Button
-              buttonName="cart"
-              className="elements"
-              onClick={() => navigate("/add-cart")}
-              style={style}
-            />
-          )}
           {
             userData === [] ? (
               <p className="user-name">Hi,user</p>
@@ -82,6 +67,21 @@ const Header = () => {
             //     onClick={() => navigate("/login")}
             //   />
           }
+          {isAdmin ? (
+            <Button
+              buttonName="Admin"
+              className="elements"
+              onClick={() => navigate("/admin-panel?tab=delivery")}
+              style={style}
+            />
+          ) : (
+            <Button
+              buttonName="cart"
+              className="elements"
+              onClick={() => navigate("/add-cart")}
+              style={style}
+            />
+          )}
         </div>
         <div className="togglebar">
           <FaBars
