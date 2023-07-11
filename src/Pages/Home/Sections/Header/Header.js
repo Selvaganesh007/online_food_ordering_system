@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Header.css";
 import { Button } from "../../../../components/Button/Button";
 import { Link, useNavigate } from "react-router-dom";
@@ -7,12 +7,31 @@ import { useSelector } from "react-redux";
 
 const Header = () => {
   const navigate = useNavigate();
+  const [navBarBg, setNavBarBg] = useState("transparent");
   const [showMenu, setShowMenu] = useState(false);
   const userData = useSelector((state) => state.homeSlice.signInUsers);
 
   const handleMenuToggle = () => {
     setShowMenu(!showMenu);
   };
+  const nonScrollColor = {
+    backgroundColor: " rgba(88, 152, 196, 1)",
+    opacity: "0.9",
+  };
+  const ScrollColor = {
+    backgroundColor: "transparent",
+  };
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 0;
+      setNavBarBg(isScrolled ? nonScrollColor : ScrollColor);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const isAdmin = false;
 
@@ -29,7 +48,7 @@ const Header = () => {
       " 0 8px 16px 2px rgba(0,0,0,0.2), 0 6px 21px 5px rgba(0,0,0,0.19)",
   };
   return (
-    <div className="nav">
+    <div className="nav" style={navBarBg}>
       <div className="nav-title">
         <h1 className="title">Anand Sweets</h1>
       </div>
