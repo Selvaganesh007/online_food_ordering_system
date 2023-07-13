@@ -1,61 +1,64 @@
-.cart-card {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  border-radius: 30px;
-  width: 500px;
-  background-color: rgb(224, 100, 100);
-  padding: 3px;
-  margin-bottom: 20px;
-  padding-bottom: 15px;
-}
-.cart-card-foodname {
-  text-align: center;
-}
-.cart-card-food-about {
-  text-align: left;
-  padding-right: 10px;
-}
-img.cart-food-img {
-  float: left;
-  border-radius: 20px;
-  width: 200px;
-  height: 140px;
-  object-fit: cover;
-  margin-top: 20px;
-  margin-right: 10px;
-  padding: 5px;
-}
-.cart-card-buttons {
-  margin-left: 4rem;
-  height: 40px;
-  display: flex;
-}
-
-.cart-buttonPlus {
-  margin-left: 20px;
-  padding: 0 10px;
-  border-radius: 50px;
-  background-color: rgb(36, 135, 211);
-  border: 1px solid rgb(36, 135, 211);
-}
-.cart-buttonMinus {
-  margin-right: 20px;
-  padding: 0 10px;
-  border-radius: 50px;
-  background-color: rgb(36, 135, 211);
-  border: 1px solid rgb(36, 135, 211);
-}
-
 .info-card {
-  padding: 5px;
+  display: flex;
+  font-family: "Outfit", sans-serif;
+  background-color: rgba(49, 68, 99, 0.858);
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 0.7rem;
+  color: #e7e1e1;
 }
-
+.cart-price {
+  margin: 0.1rem 0;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+.cartcard-food-about {
+  margin: 0.5rem 0;
+}
+.cart-food-img {
+  width: 10rem;
+  height: 8rem;
+  object-fit: cover;
+  border-radius: 0.4rem;
+}
+.cartcard-food-about {
+  width: 20rem;
+}
 .btn-2 {
   display: flex;
-  width: 100px;
+  align-items: center;
 }
-
+.name-desc-div {
+  padding: 0 1rem;
+}
+.cart-card-foodname {
+  margin: 0;
+}
+.cart-buttonMinus,
+.cart-buttonPlus {
+  height: 0;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1.5rem;
+  color: rgb(254, 253, 253);
+  background-color: rgb(22, 109, 189);
+  padding: 0.5rem;
+  padding-bottom: 1.5rem;
+}
 .cart-count {
-  margin-bottom: 20px;
-  margin-left: 1%;
+  text-align: center;
+  padding: 0 1rem;
+  color: rgb(246, 241, 241);
+}
+.cartbtn-div {
+  width: 7rem;
+}
+.cart-btn {
+  margin: 0.3rem 0 0 0.8rem;
+  border-radius: 0.3rem;
+  font-size: 0.8rem;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  font-weight: bold;
 }

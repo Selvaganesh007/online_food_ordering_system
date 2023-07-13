@@ -14,17 +14,11 @@ const Header = () => {
   const handleMenuToggle = () => {
     setShowMenu(!showMenu);
   };
-  const nonScrollColor = {
-    backgroundColor: " rgba(88, 152, 196, 1)",
-    opacity: "0.9",
-  };
-  const ScrollColor = {
-    backgroundColor: "transparent",
-  };
   useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 0;
-      setNavBarBg(isScrolled ? nonScrollColor : ScrollColor);
+      console.log(isScrolled);
+      setNavBarBg(isScrolled ? " rgba(88, 152, 196, 1)" : "transparent");
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -48,7 +42,7 @@ const Header = () => {
       " 0 8px 16px 2px rgba(0,0,0,0.2), 0 6px 21px 5px rgba(0,0,0,0.19)",
   };
   return (
-    <div className="nav" style={navBarBg}>
+    <div className="nav" style={{ backgroundColor: navBarBg }}>
       <div className="nav-title">
         <h1 className="title">Anand Sweets</h1>
       </div>
