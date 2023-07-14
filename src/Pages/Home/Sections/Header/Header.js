@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
 import { Button } from "../../../../components/Button/Button";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { useSelector } from "react-redux";
 
@@ -11,9 +11,15 @@ const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const userData = useSelector((state) => state.homeSlice.signInUsers);
 
+  const location = useLocation();
   const handleMenuToggle = () => {
     setShowMenu(!showMenu);
   };
+
+  const isAdmin = false;
+  const username = userData !== [] ? "Default user" : userData.firstName;
+  const btnName = isAdmin ? "admin" : "cart";
+
   useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 0;
@@ -27,22 +33,16 @@ const Header = () => {
     };
   }, []);
 
-  const isAdmin = false;
-
-  const style = {
-    padding: "8px 20px",
-    color: "white",
-    fontWeight: "bold",
-    backgroundColor: "#4387bf",
-    borderRadius: "10px",
-    border: "#4387bf",
-    cursor: "pointer",
-    fontSize: "12px",
-    boxShadow:
-      " 0 8px 16px 2px rgba(0,0,0,0.2), 0 6px 21px 5px rgba(0,0,0,0.19)",
-  };
   return (
-    <div className="nav" style={{ backgroundColor: navBarBg }}>
+    <div
+      className="nav"
+      style={{
+        backgroundColor:
+          location.pathname === "/add-cart"
+            ? "rgba(88, 152, 196, 1)"
+            : navBarBg,
+      }}
+    >
       <div className="nav-title">
         <h1 className="title">Anand Sweets</h1>
       </div>
@@ -68,11 +68,8 @@ const Header = () => {
         </ul>
         <div className="nav-buttons">
           {
-            userData === [] ? (
-              <p className="user-name">Hi,user</p>
-            ) : (
-              <p className="user-name">{`Hi,${userData.firstName}`} </p>
-            )
+            <p className="user-name">Hi,{username}</p>
+
             //  <Button
             //     style={style}
             //     buttonName="Login"
@@ -81,19 +78,16 @@ const Header = () => {
             //   />
           }
           {isAdmin ? (
-            <Button
-              buttonName="Admin"
-              className="elements"
+            <button
+              className="cartbtn"
               onClick={() => navigate("/admin-panel?tab=delivery")}
-              style={style}
-            />
+            >
+              {btnName}
+            </button>
           ) : (
-            <Button
-              buttonName="cart"
-              className="elements"
-              onClick={() => navigate("/add-cart")}
-              style={style}
-            />
+            <button className="cartbtn" onClick={() => navigate("/add-cart")}>
+              {btnName}
+            </button>
           )}
         </div>
         <div className="togglebar">

@@ -31,3 +31,9 @@
   position: relative;
   bottom: 180px;
 }
+.bakery-carosel {
+  margin-left: 50rem;
+}
+.carosel-root {
+  width: 50%;
+}

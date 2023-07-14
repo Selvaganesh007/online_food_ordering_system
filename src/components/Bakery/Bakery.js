@@ -1,8 +1,17 @@
 import React from "react";
 import "./Bakery.css";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { BakeryCardData } from "../../MockData/BakeryCardData";
 import { BakeryCards } from "./BakeryCards/BakeryCards.js";
 export const Bakery = () => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+  };
   return (
     <div className="bakery-page">
       <img
