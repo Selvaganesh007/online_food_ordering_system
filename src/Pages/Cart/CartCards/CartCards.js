@@ -15,17 +15,6 @@ const CartCards = ({ cartItems, RemoveCard, UpdatedCount }) => {
     setCartCount(updatedplus);
     UpdatedCount(cartItems.food_id, updatedplus);
   };
-  const style1 = {
-    padding: "12px 25px",
-    color: "white",
-    fontWeight: "bold",
-    borderRadius: "20px",
-    border: "#4387bf",
-    cursor: "pointer",
-    fontSize: "12px",
-    marginLeft: "60px",
-    backgroundColor: "black",
-  };
   return (
     <div className="cart-card">
       <div className="info-card">
@@ -45,21 +34,25 @@ const CartCards = ({ cartItems, RemoveCard, UpdatedCount }) => {
         <div className="cartbtn-div">
           <p className="cart-price">Rs.{cartItems.price}</p>
           <div className="btn-2">
-            <button
-              onClick={buttonSub}
-              className="cart-buttonMinus cardtext"
-              disabled={cartCount < 2}
-            >
-              -
-            </button>
+            <div>
+              <button
+                onClick={buttonSub}
+                className="cart-buttonMinus cardtext"
+                disabled={cartCount < 2}
+              >
+                -
+              </button>
+            </div>
             <p className="cart-count cardtext">{cartCount}</p>
-            <button
-              onClick={buttonAdd}
-              className="cart-buttonPlus cardtext"
-              disabled={cartCount >= 50}
-            >
-              +
-            </button>
+            <div>
+              <button
+                onClick={buttonAdd}
+                className="cart-buttonPlus cardtext"
+                disabled={cartCount >= 50}
+              >
+                +
+              </button>
+            </div>
           </div>
           <button
             className="cart-btn"

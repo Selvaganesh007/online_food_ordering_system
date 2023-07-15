@@ -6,6 +6,7 @@
   color: rgb(236, 240, 243);
   text-align: center;
   text-align: center;
+  z-index: 1;
   border-radius: 5rem;
   padding: 1rem;
   text-align: center;
