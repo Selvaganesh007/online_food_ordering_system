@@ -10,19 +10,32 @@
 }
 .cartbtn {
   padding: 0.5rem 1rem;
-  color: white;
+  color: rgb(247, 242, 242);
   font-weight: bold;
   background-color: #0e7edb;
   border-radius: 0.3rem;
   border: #4387bf;
   cursor: pointer;
+  position: relative;
   margin-left: 1rem;
   box-shadow: 0 0.7px 4px rgb(92, 90, 90);
   transition: 0.3s;
   font-size: 1.3rem;
 }
-.cartbtn:hover {
-  background-color: rgb(98, 179, 98);
+.cartbtn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  color: rgb(255, 255, 255);
+  width: 100%;
+  background-color: rgba(76, 216, 76, 0.703);
+  transition: all 0.2s ease-in-out;
+}
+.cartbtn:hover::after {
+  height: 100%;
+  color: rgb(247, 242, 242);
 }
 .title {
   text-shadow: 4px 0.7px 10px rgb(25, 26, 27);
@@ -76,8 +89,8 @@ div > .elements {
   left: 0;
   bottom: 0;
   width: 0;
-  height: 10%;
-  background-color: rgb(244, 248, 245);
+  height: 0.15rem;
+  background-color: rgba(6, 7, 6, 0.703);
   transition: width 0.3s ease-in-out;
 }
 
