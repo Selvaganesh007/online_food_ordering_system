@@ -1,6 +1,6 @@
 export const food_timing_category = ["break-fast", "Lunch", "Dinner"];
 
-export const food_category = ["all", "veg", "non_veg"];
+export const food_category = ["all", "veg", "non veg"];
 
 export const get_food_details = [
   {
@@ -36,7 +36,7 @@ export const get_food_details = [
     food_name: "Chana Masala",
     imageLink:
       "https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    food_category: "non_veg",
+    food_category: "non veg",
     about:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
     reviews: 7526,
@@ -134,7 +134,7 @@ export const get_food_details = [
     food_name: "Rogan Josh",
     imageLink:
       "https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    food_category: "non_veg",
+    food_category: "non veg",
     about:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
     reviews: 22887,
@@ -148,7 +148,7 @@ export const get_food_details = [
     food_name: "Dal Makhani",
     imageLink:
       "https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    food_category: "non_veg",
+    food_category: "non veg",
     reviews: 14695,
     about:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
@@ -162,7 +162,7 @@ export const get_food_details = [
     food_name: "Matar Paneer",
     imageLink:
       "https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    food_category: "non_veg",
+    food_category: "non veg",
     about:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
     reviews: 11377,
@@ -176,7 +176,7 @@ export const get_food_details = [
     food_name: "Malai Kofta",
     imageLink:
       "https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    food_category: "non_veg",
+    food_category: "non veg",
     about:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
     reviews: 24078,
@@ -204,7 +204,7 @@ export const get_food_details = [
     food_name: "Keema",
     imageLink:
       "https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    food_category: "non_veg",
+    food_category: "non veg",
     about:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
     reviews: 22506,
@@ -218,7 +218,7 @@ export const get_food_details = [
     food_name: "Vindaloo",
     imageLink:
       "https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    food_category: "non_veg",
+    food_category: "non veg",
     about:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
     reviews: 12614,
@@ -274,7 +274,7 @@ export const get_food_details = [
     food_name: "Idli",
     imageLink:
       "https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    food_category: "non_veg",
+    food_category: "non veg",
     about:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
     reviews: 22564,
@@ -302,7 +302,7 @@ export const get_food_details = [
     food_name: "Rasam",
     imageLink:
       "https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    food_category: "non_veg",
+    food_category: "non veg",
     about:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
     reviews: 15952,
@@ -330,7 +330,7 @@ export const get_food_details = [
     food_name: "Pongal",
     imageLink:
       "https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    food_category: "non_veg",
+    food_category: "non veg",
     about:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
     reviews: 10281,
@@ -358,7 +358,7 @@ export const get_food_details = [
     food_name: "Mysore Pak",
     imageLink:
       "https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    food_category: "non_veg",
+    food_category: "non veg",
     about:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
     reviews: 6137,
@@ -372,7 +372,7 @@ export const get_food_details = [
     food_name: "Gulab Jamun",
     imageLink:
       "https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    food_category: "non_veg",
+    food_category: "non veg",
     about:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
     reviews: 24947,
@@ -386,7 +386,7 @@ export const get_food_details = [
     food_name: "Rasmalai",
     imageLink:
       "https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    food_category: "non_veg",
+    food_category: "non veg",
     about:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
     reviews: 22680,
@@ -414,7 +414,7 @@ export const get_food_details = [
     food_name: "Kulfi",
     imageLink:
       "https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    food_category: "non_veg",
+    food_category: "non veg",
     about:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
     reviews: 7870,

@@ -1,6 +1,6 @@
 .carosel-div {
   position: relative;
-  bottom: 290px;
+  bottom: 300px;
   left: 50px;
   font-size: 30px;
   color: white;
@@ -20,9 +20,10 @@
   text-align: left;
   margin-bottom: 20px;
 }
-/* .maincarosel {
-  margin-top: 200px;
-} */
+.maincarosel {
+  position: absolute;
+  top: 0px;
+}
 .link-btn {
   color: aliceblue;
 }

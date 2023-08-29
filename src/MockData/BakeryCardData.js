@@ -5,7 +5,7 @@ export const BakeryCardData = [
     imageLink:
       "https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     about:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo",
     food_category: "veg",
     reviews: 14404,
     star: 2,
@@ -19,7 +19,7 @@ export const BakeryCardData = [
     imageLink:
       "https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     about:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo",
     food_category: "veg",
     reviews: 7544,
     star: 2,
@@ -32,9 +32,9 @@ export const BakeryCardData = [
     food_name: "Chana Masala",
     imageLink:
       "https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    food_category: "non_veg",
+    food_category: "non veg",
     about:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo",
     reviews: 7526,
     star: 3,
     description: "Grilled salmon with asparagus",
@@ -48,7 +48,7 @@ export const BakeryCardData = [
       "https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     food_category: "veg",
     about:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo",
     reviews: 6592,
     star: 4,
     description: "Beef stir fry with rice",

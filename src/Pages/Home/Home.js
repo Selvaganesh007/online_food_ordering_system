@@ -48,6 +48,7 @@ const Home = () => {
     dispatch(addCartAction(allCards));
     toastFunction("success", "cart added successfully", 3000);
   };
+  console.log("home");
 
   return (
     <div className="home">

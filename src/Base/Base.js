@@ -20,14 +20,14 @@ export const Base = () => {
       <div className="base">
         <Routes>
           <Route path="/login" element={<Login />} />
-          <Route path="/" element={<Home />} />
+          <Route path="/Food_ordering_system" element={<Home />} />
           <Route path="/add-cart" element={<Cart />} />
           <Route path="/sign-in" element={<SignUp />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
-          {
-            isAdmin && <Route path="/admin-panel?tab=delivery" element={<AdminPanel />} />
-          }
+          {isAdmin && (
+            <Route path="/admin-panel?tab=delivery" element={<AdminPanel />} />
+          )}
           <Route path="/admin-panel" element={<AdminPanel />} />
           <Route path="/Get-Address" element={<GetAddress />} />
           <Route path="/final-cart" element={<FinalCart />} />

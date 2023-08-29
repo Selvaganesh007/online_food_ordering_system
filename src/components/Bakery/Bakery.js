@@ -2,7 +2,14 @@ import React from "react";
 import "./Bakery.css";
 import { BakeryCardData } from "../../MockData/BakeryCardData";
 import { BakeryCards } from "./BakeryCards/BakeryCards.js";
+
 export const Bakery = () => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+  };
   return (
     <div className="bakery-page">
       <img

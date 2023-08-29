@@ -65,9 +65,10 @@ const Card = ({ items, showCounter, handleAddToCart }) => {
               -
             </button>
             <input
-              type="text"
-              value={count}
+              style={{ marginBottom: "0" }}
               className="input-count"
+              type="number"
+              value={count}
               onChange={handleChange}
               inputMode="numeric"
             />
