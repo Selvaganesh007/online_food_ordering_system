@@ -50,7 +50,7 @@ const Header = () => {
         <ul className={`navbar-links ${showMenu ? "show" : ""}`}>
           <div className="links">
             <li className="nav-li">
-              <Link className="linkelements text-link" to="/">
+              <Link className="linkelements text-link" to="/home">
                 Home
               </Link>
             </li>
