@@ -20,7 +20,7 @@ export const Base = () => {
       <div className="base">
         <Routes>
           <Route path="/login" element={<Login />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/Food_ordering_system/home" element={<Home />} />
           <Route path="/add-cart" element={<Cart />} />
           <Route path="/sign-in" element={<SignUp />} />
           <Route path="/contact" element={<Contact />} />
