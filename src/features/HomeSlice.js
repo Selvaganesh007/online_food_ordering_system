@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { userDetails } from "../MockData/userLoginData";
 
 const initialHomeSlice = {
-  signInUsers: [],
+  signInUsers: [...userDetails],
   radioOption: "",
   addCart: [],
 };
@@ -11,7 +12,8 @@ const HomeSlice = createSlice({
   initialState: initialHomeSlice,
   reducers: {
     signInUserAction(state, action) {
-      state.signInUsers = action.payload;
+      console.log({ state });
+      state.signInUsers = [state, action.payload];
     },
     radioOptionAction(state, action) {
       state.radioOption = action.payload;

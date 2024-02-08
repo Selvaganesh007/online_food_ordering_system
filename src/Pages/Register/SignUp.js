@@ -51,10 +51,6 @@ const SignUp = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const signinData = useSelector((state) => state.homeSlice.signInUsers);
-  console.log(setUserData);
-  // const validationUsername = signinData.map((items) => {
-  //   return items.username !== username;
-  // });
 
   const handleSubmit = (e) => {
     e.preventDefault();
