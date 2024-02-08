@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
-import { Button } from "../../../../components/Button/Button";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { useSelector } from "react-redux";
@@ -17,7 +16,7 @@ const Header = () => {
   };
 
   const isAdmin = false;
-  const username = userData !== [] ? "Default user" : userData.firstName;
+  const username = userData.firstName || "Default user";
   const btnName = isAdmin ? "admin" : "cart";
 
   useEffect(() => {
@@ -50,7 +49,7 @@ const Header = () => {
         <ul className={`navbar-links ${showMenu ? "show" : ""}`}>
           <div className="links">
             <li className="nav-li">
-              <Link className="linkelements text-link" to="/">
+              <Link className="linkelements text-link" to="/Food_ordering_system/home">
                 Home
               </Link>
             </li>

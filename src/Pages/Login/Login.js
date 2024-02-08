@@ -47,8 +47,6 @@ const Login = () => {
   const signInData = useSelector((state) => state.homeSlice.signInUsers);
 
   const validation = signInData.some((items) => {
-    console.log({ items });
-    console.log({ loginUser });
     return (
       items.username === loginUser.username &&
       items.password === loginUser.password
@@ -60,7 +58,6 @@ const Login = () => {
   };
 
   const buttonSubmit = () => {
-    console.log(validation);
     if (validation) {
       navigate("/");
     } else {
